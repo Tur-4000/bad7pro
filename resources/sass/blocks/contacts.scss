@@ -1,0 +1,32 @@
+.contacts__element {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    &:first-child {
+        margin-bottom: 0.6em;
+    }
+
+    &:last-child {
+        margin-bottom: 1em;
+    }
+}
+
+.contacts__link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: $second;
+    font-size: 1em;
+    box-sizing: border-box;
+    border-bottom: 2px solid $activeColor;
+    padding-bottom: 0.2em;
+    transition-duration: 500ms;
+    transition-property: color, border-color;
+
+    &:hover, &:focus {
+        color: $activeColor;
+        border-color: red;
+    }
+}
