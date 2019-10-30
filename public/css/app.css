@@ -811,3 +811,40 @@ body {
   }
 }
 
+.main {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, 30%) 70%;
+}
+
+.main__info {
+  grid-column: span 1;
+  grid-row: span 1;
+  padding: 0 2em;
+  margin: auto 0;
+  text-align: center;
+}
+
+.main__title {
+  text-align: center;
+}
+
+.main__video {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: coral;
+}
+
+.main__partners {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  grid-column: span 2;
+  grid-row: span 1;
+  margin-left: 200px;
+  height: 3em;
+  width: calc(100% - 200px);
+  background-color: grey;
+}
+
