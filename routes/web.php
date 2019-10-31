@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/services', "ServicesController@index")->name('services');
+Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
+Route::get('/contacts', 'ContactsController@index')->name('contacts');
+Route::get('/contacts', 'ContactsController@index')->name('contacts');
+
+Route::get('/vacancies', 'VacanciesController@index')->name('vacancies.index');

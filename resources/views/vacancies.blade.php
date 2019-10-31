@@ -4,5 +4,5 @@
 
 
 @section('content')
-    <h1>Скоро будет</h1>
+    <h1>Мы ищем таланты</h1>
 @endsection

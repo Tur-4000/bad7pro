@@ -6,16 +6,16 @@
 
     <ul class="navbar__list list">
         <li class="list__element">
-            <a href="#" class="list__link">Услуги</a>
+            <a href="{{ route('services') }}" class="list__link">Услуги</a>
         </li>
         <li class="list__element">
-            <a href="#" class="list__link">Работы</a>
+            <a href="{{ route('portfolio') }}" class="list__link">Работы</a>
         </li>
         <li class="list__element">
-            <a href="#" class="list__link">Контакты</a>
+            <a href="{{ route('contacts') }}" class="list__link">Контакты</a>
         </li>
         <li class="list__element">
-            <a href="#" class="list__link">Вакансии</a>
+            <a href="{{ route('vacancies.index') }}" class="list__link">Вакансии</a>
         </li>
     </ul>
 
