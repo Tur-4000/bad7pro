@@ -29,9 +29,9 @@
     transition-property: fill;
 }
 
-.socials__linkedin {
+.socials__instagram {
     width: 24px;
-    height: 23px;
+    height: 24px;
     fill: $second;
     transition-duration: 500ms;
     transition-property: fill;
@@ -39,7 +39,7 @@
 
 .socials__youtube {
     width: 24px;
-    height: 24px;
+    height: 21px;
     fill: $second;
     transition-duration: 500ms;
     transition-property: fill;
@@ -49,7 +49,7 @@
 
     &:hover, &:focus, &:active {
 
-        .socials__youtube, .socials__linkedin, .socials__twitter, .socials__facebook {
+        .socials__youtube, .socials__instagram, .socials__twitter, .socials__facebook {
             fill: $activeColor;
         }
 

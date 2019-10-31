@@ -35,14 +35,14 @@
             </a>
         </li>
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="LinkedIn">
-                <svg class="socials__linkedin">
-                    <use xlink:href="/img/symbol/sprite.svg#linked"></use>
+            <a href="#" class="socials__link" aria-label="Instagram">
+                <svg class="socials__instagram">
+                    <use xlink:href="/img/symbol/sprite.svg#instagram"></use>
                 </svg>
             </a>
         </li>
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="Google plus">
+            <a href="#" class="socials__link" aria-label="Youtube">
                 <svg class="socials__youtube">
                     <use xlink:href="/img/symbol/sprite.svg#youtube"></use>
                 </svg>
