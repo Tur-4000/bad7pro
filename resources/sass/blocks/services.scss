@@ -1,0 +1,27 @@
+.services {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.services__header {
+    height: 18em;
+    background: url("../../img/services-banner.jpg") center no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin-bottom: 30px;
+}
+
+.services__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, auto));
+    grid-gap: 1em;
+    justify-content: center;
+    padding: 2%;
+}
+
+.services__card {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+

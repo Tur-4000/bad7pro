@@ -10,10 +10,8 @@
                 <span>production</span>
             </h1>
             <p class="main__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aspernatur deleniti earum fugiat harum illo in,
-                mollitia nisi nobis reprehenderit sit!
-                <a href="#" class="main__link">поехали</a>
+                Делаем хорошо!<br>
+                <a href="#" class="main__link">сделать хорошо</a>
             </p>
         </div>
 

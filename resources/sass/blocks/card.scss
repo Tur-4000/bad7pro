@@ -1,0 +1,55 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    //padding-left: 2em;
+    //padding-right: 2em;
+    padding: 2em;
+}
+
+.card__head {
+    height: 15em;
+    background-color: #97bf0d;
+}
+
+.card__title {
+    text-align: center;
+}
+
+.card__text {
+    min-height: 120px;
+}
+
+.card__btn {
+    margin-top: auto;
+    background: $menuBg;
+    border: transparent;
+    box-sizing: border-box;
+    padding: 3%;
+    color: $primary;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $black;
+        color: $activeColor;
+    }
+
+    &:focus {
+        background: $menuBg;
+    }
+}
+
+.card__head--reklama {
+
+}
+.card__head--image {
+
+}
+.card__head--translation {
+    background: url("../../img/translation.jpg") center no-repeat;
+    background-size: 100%;
+}
+.card__head--promotion {
+
+}
+

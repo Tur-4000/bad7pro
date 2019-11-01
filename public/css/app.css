@@ -851,7 +851,7 @@ body {
   grid-column: span 1;
   grid-row: span 1;
   background-color: coral;
-  background: url("/../img/dsc03149.jpg") center center no-repeat;
+  background: url(/images/main-banner.jpg?2d95205273079e4d2c9ca1fde3d323a4) center center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: flex;
@@ -988,5 +988,80 @@ body {
 .video__text {
   color: #fff;
   font-size: 20px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.services__header {
+  height: 18em;
+  background: url(/images/services-banner.jpg?a59b51112b6d6aa71ff14efbaa49113d) center no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 30px;
+}
+
+.services__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, auto));
+  grid-gap: 1em;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 2%;
+}
+
+.services__card {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.card {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  padding: 2em;
+}
+
+.card__head {
+  height: 15em;
+  background-color: #97bf0d;
+}
+
+.card__title {
+  text-align: center;
+}
+
+.card__text {
+  min-height: 120px;
+}
+
+.card__btn {
+  margin-top: auto;
+  background: #333333;
+  border: transparent;
+  box-sizing: border-box;
+  padding: 3%;
+  color: #e9eae2;
+  text-transform: uppercase;
+}
+
+.card__btn:hover {
+  background: #000;
+  color: #ffc107;
+}
+
+.card__btn:focus {
+  background: #333333;
+}
+
+.card__head--translation {
+  background: url(/images/translation.jpg?a96da929ae291ad3175f1471f85c5e8e) center no-repeat;
+  background-size: 100%;
 }
 
