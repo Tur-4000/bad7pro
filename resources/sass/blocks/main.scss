@@ -14,13 +14,21 @@
 }
 
 .main__title {
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    line-height: 2;
+    line-height: 1;
     font-size: 40px;
-    font-weight: normal;
+    font-weight: 700;
+
+    span {
+        font-size: 30px;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
 }
 
 .main__text {
+    margin-top: 17%;
     font-size: 20px;
     line-height: 2;
 }
@@ -69,4 +77,41 @@
     width: calc(100% - 200px);
     background-color: grey;
     z-index: 2;
+    text-align: center;
+}
+
+
+@media (max-width: 980px) {
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .main__info {
+        order: 2;
+        grid-column: span 1;
+        grid-row: span 1;
+        margin-top: 5%;
+        margin-bottom: 10%;
+
+        .main__text {
+            margin-top: 5%;
+        }
+    }
+
+    .main__video {
+        order: 1;
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .main__partners {
+        order: 3;
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        grid-column: span 1;
+        grid-row: span 1;
+        margin-top: auto;
+    }
 }

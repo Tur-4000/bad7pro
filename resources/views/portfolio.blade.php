@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.comingsoon')
 
-@section('title'){{ $title }}@endsection
+{{--@section('title'){{ $title }}@endsection--}}
 
 
-@section('content')
-    <h1>Скоро будет</h1>
-@endsection
+{{--@section('content')--}}
+{{--    <h1>Скоро будет</h1>--}}
+{{--@endsection--}}

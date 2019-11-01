@@ -6,7 +6,8 @@
         <div class="main__info">
             <h1 class="main__title">
                 <!--            Видеостудия<br> -->
-                bad7production
+                bad7<br>
+                <span>production</span>
             </h1>
             <p class="main__text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -22,7 +23,7 @@
                 <div class="video">
                     <button class="video__btn">
                         <svg>
-                            <use xlink:href="/img/symbol/sprite.svg#play-button"></use>
+                            <use xlink:href="/img/symbol/sprite.svg#play"></use>
                         </svg>
                     </button>
                     <p class="video__text">
@@ -34,7 +35,7 @@
         </div>
 
         <div class="main__partners">
-            наши клиенты
+            наши счастливые клиенты
 {{--            <div class="clients__carousel carousel owl-carousel owl-theme">--}}
 {{--                <div class="carousel__item">--}}
 {{--                    <img src="img/client1.png" alt="Клиент 1">--}}

@@ -16,7 +16,7 @@
     border-radius: 50%;
     border: 3px solid $white;
     z-index: 10;
-    transition-property: background;
+    transition-property: background, border-color;
     transition-duration: 500ms;
 
     svg {
@@ -32,7 +32,16 @@
         background: $white;
 
         svg {
-            fill: red;
+            fill: $activeColor;
+        }
+    }
+
+    &:focus {
+        background: darken($white, 25%);
+        border-color: darken($white, 25%);
+
+        svg {
+            fill: darken($activeColor, 25%);
         }
     }
 }

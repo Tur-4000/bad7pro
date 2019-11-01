@@ -15,7 +15,7 @@
             <a href="{{ route('contacts') }}" class="list__link">Контакты</a>
         </li>
         <li class="list__element">
-            <a href="{{ route('vacancies.index') }}" class="list__link">Вакансии</a>
+            <a href="{{ route('vacancies.index') }}" class="list__link">Карьера</a>
         </li>
     </ul>
 
