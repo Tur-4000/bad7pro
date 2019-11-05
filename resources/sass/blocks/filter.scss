@@ -1,0 +1,44 @@
+.filter {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.filter__element {
+    display: block;
+    flex-basis: 33.33%;
+    text-align: center;
+    border-bottom: 3px solid $menuBg;
+    transition-duration: 500ms;
+    transition-property: border-color;
+
+    &:hover {
+        border-color: red;
+        cursor: pointer;
+    }
+}
+
+.filter__element--active {
+    border-color: red;
+
+    .filter__link {
+        color: red;
+    }
+}
+
+.filter__link {
+    padding: 2% 25%;
+    font-size: 20px;
+    text-decoration: none;
+    color: $black;
+    line-height: 2;
+    transition-duration: 500ms;
+    transition-property: color;
+
+    &:hover {
+        color: red;
+    }
+}

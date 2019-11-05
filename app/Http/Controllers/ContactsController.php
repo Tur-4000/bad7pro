@@ -8,6 +8,7 @@ class ContactsController extends Controller
 {
     public function index() {
         $title = 'Наши контакты';
-        return view('contacts', compact('title'));
+        $contacts = true;
+        return view('contacts', compact('title', 'contacts'));
     }
 }

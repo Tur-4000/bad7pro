@@ -8,6 +8,7 @@ class ServicesController extends Controller
 {
     public function index() {
         $title = 'Услуги';
-        return view('services', compact('title'));
+        $services = true;
+        return view('services', compact('title', 'services'));
     }
 }

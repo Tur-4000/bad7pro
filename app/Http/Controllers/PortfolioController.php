@@ -8,6 +8,7 @@ class PortfolioController extends Controller
 {
     public function index() {
         $title = 'Наши работы';
-        return view('portfolio', compact('title'));
+        $portfolio = true;
+        return view('portfolio', compact('title', 'portfolio'));
     }
 }

@@ -1,0 +1,21 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.portfolio__header {
+    grid-column: span 1;
+    height: 18em;
+    width: 100%;
+    text-align: center;
+
+    background-color: #869791;
+
+    h1 {
+        height: 15%;
+    }
+}
+
+.portfolio__filter {
+    grid-column: span 1;
+}

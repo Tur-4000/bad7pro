@@ -14,7 +14,8 @@ class VacanciesController extends Controller
     public function index()
     {
         $title = 'Вакансии';
-        return view('vacancies', compact('title'));
+        $vacancies = true;
+        return view('vacancies', compact('title', 'vacancies'));
     }
 
     /**

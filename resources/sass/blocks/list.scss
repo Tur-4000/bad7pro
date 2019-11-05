@@ -13,6 +13,14 @@
     }
 }
 
+.list__element--active {
+    background-color: $black;
+
+    .list__link {
+        color: $activeColor;
+    }
+}
+
 .list__link {
     display: block;
     margin: 0;
