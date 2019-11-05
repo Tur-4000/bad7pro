@@ -705,10 +705,11 @@ body {
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  text-align: center;
 }
 
 .contacts__element:first-child {
-  margin-bottom: 0.6em;
+  margin-bottom: 1em;
 }
 
 .contacts__element:last-child {
@@ -716,7 +717,6 @@ body {
 }
 
 .contacts__link {
-  display: block;
   margin: 0 auto;
   text-align: center;
   text-decoration: none;
@@ -845,6 +845,23 @@ body {
   margin-top: 17%;
   font-size: 20px;
   line-height: 2;
+}
+
+.main__link {
+  color: #000;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ffc107;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+}
+
+.main__link:hover {
+  color: red;
+  border-color: red;
 }
 
 .main__video {

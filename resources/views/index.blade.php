@@ -10,7 +10,7 @@
                 <span>production</span>
             </h1>
             <p class="main__text">
-                Делаем хорошо!<br>
+                Просто делаем хорошо!<br>
                 <a href="#" class="main__link">сделать хорошо</a>
             </p>
         </div>

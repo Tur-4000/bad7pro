@@ -33,6 +33,21 @@
     line-height: 2;
 }
 
+.main__link {
+    color: $black;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid $activeColor;
+    transition-duration: 500ms;
+    transition-property: color, border-color;
+
+    &:hover {
+        color: red;
+        border-color: red;
+    }
+}
+
 .main__video {
     position: relative;
     grid-column: span 1;

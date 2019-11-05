@@ -2,9 +2,10 @@
     margin: 0 auto;
     padding: 0;
     list-style: none;
+    text-align: center;
 
     &:first-child {
-        margin-bottom: 0.6em;
+        margin-bottom: 1em;
     }
 
     &:last-child {
@@ -13,7 +14,7 @@
 }
 
 .contacts__link {
-    display: block;
+    //display: block;
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
