@@ -21,17 +21,21 @@
             </li>
         </ul>
         <ul class="portfolio__works works">
+
             <li class="works__element">
                 <div class="works__video">
                     <iframe width="368" height="207" src="https://www.youtube.com/embed/v0k22ZD1CyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="works__info">
-                    <div class="works__title">Пельмени</div>
-                    <time class="works__date" datetime="2018-11-14">14 нояб. 2018 г.</time>
-                    <div class="works__type">Реклама</div>
-                    <div class="works__description">Реклама пельменей</div>
+                    <h2 class="works__title">Пельмени</h2>
+                    <p class="works__details">
+                        <time class="works__date" datetime="2018-11-14">14 нояб. 2018 г.</time>
+                        <span class="works__type">Реклама</span>
+                    </p>
+                    <p class="works__description">Реклама пельменей</p>
                 </div>
             </li>
+
         </ul>
     </section>
 
