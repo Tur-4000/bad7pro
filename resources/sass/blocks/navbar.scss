@@ -7,6 +7,7 @@
     height: 100vh;
     background-color: $menuBg;
     overflow: auto;
+    z-index: 9999;
 }
 
 .navbar__logo {
@@ -19,7 +20,7 @@
     font-family: 'Josefin Sans', sans-serif;
     color: $activeColor;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
 }
 

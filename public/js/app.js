@@ -164,9 +164,9 @@ hamburger.addEventListener("click", function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\sass\cs.scss */"./resources/sass/cs.scss");
+__webpack_require__(/*! /home/tur/prj/bad7pro/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/tur/prj/bad7pro/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/tur/prj/bad7pro/resources/sass/cs.scss */"./resources/sass/cs.scss");
 
 
 /***/ })
