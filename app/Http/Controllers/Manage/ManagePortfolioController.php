@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
+use App\Portfolio;
 use Illuminate\Http\Request;
 
 class ManagePortfolioController extends Controller
@@ -14,7 +15,9 @@ class ManagePortfolioController extends Controller
      */
     public function index()
     {
-        return view('manage.index');
+        $portfolio = Portfolio::all();
+
+        return view('manage.portfolio', compact('portfolio'));
     }
 
     /**
@@ -24,7 +27,9 @@ class ManagePortfolioController extends Controller
      */
     public function create()
     {
-        //
+        $portfolio = new Portfolio();
+
+        return view('manage.portfolio_create', compact('portfolio'));
     }
 
     /**
@@ -35,7 +40,7 @@ class ManagePortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

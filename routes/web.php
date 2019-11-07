@@ -21,4 +21,9 @@ Route::get('/contacts', 'ContactsController@index')->name('contacts');
 Route::get('/vacancies', 'VacanciesController@index')->name('vacancies.index');
 
 
-Route::get('manage', 'Manage\ManagePortfolioController@index');
+// Маршруты админки
+Route::get('/manage', function () {
+    return view('manage.index');
+})->name('manage.index');
+
+Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')->names('manage.portfolio');
