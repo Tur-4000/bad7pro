@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-8 mx-auto">
+    <div class="row justify-content-center">
+        <div class="col-8">
             <h1>Добавление новой работы</h1>
 
             {{ Form::model($portfolio, ['route' => 'manage.portfolio.store', 'method' => 'POST']) }}

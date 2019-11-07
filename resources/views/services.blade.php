@@ -12,7 +12,18 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/v0k22ZD1CyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <h2 class="card__title">Рекламный ролик</h2>
-                <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequuntur dicta dolorum est facilis fuga fugit laborum magni necessitatibus placeat quam veniam, voluptatem. Dicta dolores ducimus est exercitationem laborum.</div>
+                <div class="card__text">
+                    <p><b>Рекламный ролик</b>  — это видеоролик, основная цель которого &mdash; привлечь внимание
+                        потенциальных потребителей для стимулирования продаж рекламируемого товара (услуги).</p>
+                    <p>Мы продемонстрируем в Рекламном ролике все преимущества вашего товара с помощью креативной идеи,
+                        и покупатели запомнят товар (услугу) и захотят приобрести его. </p>
+                    <h3>Преимущества рекламного ролика:</h3>
+                    <p><b>Запоминающаяся демонстрация товара (услуги).</b> Учёными доказано, что формат видео+звук –
+                        лучшее средство для запоминания информации. Ролик позволит запомнить потребителю внешний вид
+                        товара, что увеличивает вероятность покупки.</p>
+                    <p><b>Большой выбор площадок для продвижения.</b> Рекламный ролик адаптирован для показа на ТВ, в
+                        социальных сетях, на сайте, на Youtube. Ролик будет продавать ваш товар (услугу) 24/7.</p>
+                </div>
                 <button class="card__btn">Закажи меня</button>
             </div>
             <div class="services__card card">
@@ -20,19 +31,45 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/4KrEDKFX26Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <h2 class="card__title">Имиджевый ролик</h2>
-                <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolore, dolores, eligendi eveniet exercitationem facere iusto maxime nam numquam officia perspiciatis similique veniam. Cupiditate fugit in ipsum, itaque libero minima nam non optio.</div>
+                <div class="card__text">
+                    <p><b>Имиджевый ролик</b> – это видеоролик, основная цель которого – презентовать компанию, рассказать о
+                        её корпоративной культуре и сотрудниках в целом, не затрагивая конкретные товары (услуги).</p>
+                    <p>Мы продемонстрируем в Имиджевом ролике видеоисторию способную рассказать Вашей аудитории больше,
+                        чем сотни страниц печатного текста.</p>
+                    <p>Имиджевый ролик с правильным посылом поможет развивать ваш бизнес, привлекая большее количество
+                        аудитории. Покажите людям, что ваша компания успешна, а сотрудники счастливы, и вы получите
+                        больше желающих стать частью вашей организации.</p>
+                    <h3>Преимущества имиджевого ролика:</h3>
+                    <p>Создаёт доверие и лояльность к Вашему бренду, а также демонстрирует человеческую сторону Вашего
+                        бизнеса.</p>
+                    <p>Большой выбор площадок для продвижения. Имиджевый ролик адаптирован для показа на ТВ, в
+                        социальных сетях, на сайте, на Youtube и др. </p>
+                    <p>Выполняет роль пассивного HR-инструмента, который работает в режиме 24/7,
+                        привлекая талантливых претендентов.</p>
+                </div>
                 <button class="card__btn">Закажи меня</button>
             </div>
             <div class="services__card card">
                 <div class="card__head card__head--translation"></div>
                 <h2 class="card__title">Трансляции</h2>
-                <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet molestias nihil odio ut voluptatibus. Adipisci alias, commodi cumque cupiditate debitis, ex expedita explicabo fugiat impedit inventore molestiae molestias necessitatibus nisi numquam quas quis quos repellendus, sapiente totam voluptates. Esse ipsam iure voluptatibus?</div>
+                <div class="card__text">
+                    <p><b>Прямые трансляции</b> – это отличный способ общаться с Вашей целевой аудиторией.</p>
+                    <p>Проводим прямые трансляции в прямом эфире телеканала, Youtube канала, социальных сетях.</p>
+                    <p>Подготовим всё необходимое для проведения прямой трансляции Вашего мероприятия,
+                        оставим Вас довольными полученным результатом.</p>
+                </div>
                 <button class="card__btn">Закажи меня</button>
             </div>
             <div class="services__card card">
                 <div class="card__head card__head--promotion"></div>
                 <h2 class="card__title">Продвижение</h2>
-                <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at beatae, commodi debitis deserunt dolorem eos ipsa itaque nihil optio perspiciatis quam tempore tenetur velit!</div>
+                <div class="card__text">
+                    <h3>Зачем нужно продвижение:</h3>
+                    <p>Размещение видеороликов в мировой сети интернет позволяет сформировать отношение к бренду
+                        компании, создать необходимые ассоциации и нужным образом связать зрительскую эмоцию с
+                        компанией или товаром (услугой). Также продвижение в сети является одним из ключевых этапов
+                        на пути популяризации идеи, заложенной в ролике.</p>
+                </div>
                 <button class="card__btn">Закажи меня</button>
             </div>
         </div>
