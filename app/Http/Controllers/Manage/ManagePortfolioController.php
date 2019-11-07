@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePortfolioRequest;
+use App\Http\Requests\UpdatePortfolioRequest;
 use App\Portfolio;
 use Illuminate\Http\Request;
 
@@ -15,9 +17,12 @@ class ManagePortfolioController extends Controller
      */
     public function index()
     {
-        $portfolio = Portfolio::all();
+        $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
+        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url'])
+            ->orderBy('id', 'DESC')
+            ->get();
 
-        return view('manage.portfolio', compact('portfolio'));
+        return view('manage.portfolio', compact('portfolio', 'type'));
     }
 
     /**
@@ -38,9 +43,14 @@ class ManagePortfolioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePortfolioRequest $request)
     {
-        dd($request);
+        $portfolio = new Portfolio();
+        $portfolio->fill($request->all());
+        $portfolio->save();
+
+        return redirect()
+            ->route('manage.portfolio.index');
     }
 
     /**
@@ -51,7 +61,7 @@ class ManagePortfolioController extends Controller
      */
     public function show($id)
     {
-        //
+        dd(__METHOD__, $id);
     }
 
     /**
@@ -62,7 +72,10 @@ class ManagePortfolioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url'])
+            ->findOrFail($id);
+
+        return view('manage.portfolio_edit', compact('portfolio'));
     }
 
     /**
@@ -72,9 +85,17 @@ class ManagePortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePortfolioRequest $request, $id)
     {
-        //
+//        dd(__METHOD__, $id, $request->all());
+
+        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url'])
+            ->findOrFail($id);
+        $portfolio->fill($request->all());
+        $portfolio->save();
+
+        return redirect()
+            ->route('manage.portfolio.index');
     }
 
     /**
@@ -85,6 +106,12 @@ class ManagePortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+//        dd(__METHOD__, $id);
+
+        $portfolio = Portfolio::find($id);
+        if ($portfolio) {
+            $portfolio->delete();
+        }
+        return redirect()->route('manage.portfolio.index');
     }
 }

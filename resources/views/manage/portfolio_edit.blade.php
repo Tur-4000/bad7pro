@@ -20,14 +20,14 @@
 {{--                </div>--}}
             @endif
 
-            <h1>Добавление новой работы</h1>
+            <h1>Редактирование работы</h1>
 
-            {{ Form::model($portfolio, ['route' => 'manage.portfolio.store', 'method' => 'POST']) }}
+            {{ Form::model($portfolio, ['route' => ['manage.portfolio.update', $portfolio->id], 'method' => 'PATCH']) }}
 
                 @include('manage.includes.portfolio_form')
 
                 <div class="form-group d-flex justify-content-between">
-                    {{ Form::submit('Добавить', ['class' => 'btn btn-primary']) }}
+                    {{ Form::submit('Сохранить', ['class' => 'btn btn-primary']) }}
                     <a href="{{ route('manage.portfolio.index') }}" class="btn btn-outline-success">Назад</a>
                 </div>
             {{ Form::close() }}

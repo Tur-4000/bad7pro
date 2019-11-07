@@ -22,19 +22,21 @@
         </ul>
         <ul class="portfolio__works works">
 
+        @foreach($portfolio as $item)
             <li class="works__element">
                 <div class="works__video">
-                    <iframe width="368" height="207" src="https://www.youtube.com/embed/v0k22ZD1CyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="368" height="207" src="{{ $item->url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="works__info">
-                    <h2 class="works__title">Пельмени</h2>
+                    <h2 class="works__title">{{ $item->title }}</h2>
                     <p class="works__details">
-                        <time class="works__date" datetime="2018-11-14">14 нояб. 2018 г.</time>
-                        <span class="works__type">Реклама</span>
+                        <time class="works__date" datetime="{{ $item->date }}">{{ Carbon\Carbon::parse($item->date)->toFormattedDateString() }}</time>
+                        <span class="works__type">{{ $type[$item->type] }}</span>
                     </p>
-                    <p class="works__description">Реклама пельменей</p>
+                    <p class="works__description">{{ $item->description }}</p>
                 </div>
             </li>
+        @endforeach
 
         </ul>
     </section>

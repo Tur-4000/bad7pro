@@ -3,8 +3,9 @@
 }
 
 .works__element {
+    margin-top: 2%;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 2fr;
 }
 
 .works__video {

@@ -25,17 +25,31 @@
             <th scope="col">Тип</th>
             <th scope="col">Дата</th>
             <th scope="col">URL</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
 @foreach($portfolio as $item)
         <tr>
             <th scope="row">{{ $item->id }}</th>
-            <td>{{ $item->title }}</td>
+            <td>
+                <a href="{{ route('manage.portfolio.edit', $item->id) }}">
+                    {{ $item->title }}
+                </a>
+            </td>
             <td>{{ $item->description }}</td>
-            <td>{{ $item->type }}</td>
-            <td>{{ $item->date }}</td>
+            <td>{{ $type[$item->type] }}</td>
+            <td>{{ Carbon\Carbon::parse($item->date)->toFormattedDateString() }}</td>
             <td>{{ $item->url }}</td>
+            <td>
+                <a href="{{ route('manage.portfolio.destroy', $item->id) }}"
+                   data-confirm="Вы действительно хотите удалить запись: {{ $item->title }}?"
+                   data-method="delete"
+                   rel="nofollow"
+                   class="text-danger">
+                    Удалить
+                </a>
+            </td>
         </tr>
 @endforeach
         </tbody>
