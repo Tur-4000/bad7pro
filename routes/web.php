@@ -26,4 +26,6 @@ Route::get('/manage', function () {
     return view('manage.index');
 })->name('manage.index');
 
-Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')->names('manage.portfolio');
+Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
+    ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
+    ->names('manage.portfolio');
