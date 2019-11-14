@@ -10,14 +10,15 @@
             <h1>Наши работы</h1>
         </div>
         <ul class="portfolio__filter filter">
-            <li class="filter__element filter__element--active">
-                <a href="#" class="filter__link">Все работы</a>
+{{--            <li class="filter__element @isset($workType) filter__element--active @endisset ">--}}
+            <li class="filter__element @if(empty($workType)) filter__element--active @endif">
+                <a href="{{ route('portfolio') }}" class="filter__link">Все работы</a>
             </li>
-            <li class="filter__element">
-                <a href="#" class="filter__link">Рекламные</a>
+            <li class="filter__element @if($workType == 'reklama') filter__element--active @endif ">
+                <a href="{{ route('portfolio.filter', 'reklama') }}" class="filter__link">Рекламные</a>
             </li>
-            <li class="filter__element">
-                <a href="#" class="filter__link">Имиджевые</a>
+            <li class="filter__element @if($workType == 'image') filter__element--active @endif ">
+                <a href="{{ route('portfolio.filter', 'image') }}" class="filter__link">Имиджевые</a>
             </li>
         </ul>
         <ul class="portfolio__works works">
