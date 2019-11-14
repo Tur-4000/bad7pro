@@ -18,7 +18,7 @@ class ManagePortfolioController extends Controller
     public function index()
     {
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
-        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url'])
+        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published'])
             ->orderBy('id', 'DESC')
             ->get();
 
@@ -54,17 +54,6 @@ class ManagePortfolioController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        dd(__METHOD__, $id);
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -72,7 +61,7 @@ class ManagePortfolioController extends Controller
      */
     public function edit($id)
     {
-        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url'])
+        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published'])
             ->findOrFail($id);
 
         return view('manage.portfolio_edit', compact('portfolio'));
@@ -87,11 +76,14 @@ class ManagePortfolioController extends Controller
      */
     public function update(UpdatePortfolioRequest $request, $id)
     {
-//        dd(__METHOD__, $id, $request->all());
+//        dd(__METHOD__, $id, $request->all(), $request->published);
 
-        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url'])
+        $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published'])
             ->findOrFail($id);
         $portfolio->fill($request->all());
+        if (!$request->published) {
+            $portfolio->published = false;
+        }
         $portfolio->save();
 
         return redirect()

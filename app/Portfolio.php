@@ -15,5 +15,6 @@ class Portfolio extends Model
         'url',
         'type',
         'date',
+        'published',
     ];
 }

@@ -1,3 +1,14 @@
+<div class="form-group form-check">
+    {{ Form::checkbox('published', 1, $portfolio->published, ['class' => 'form-check-input']) }}
+    {{ Form::label('published', 'Опубликовать', ['class' => 'form-check-label']) }}
+    <small id="titleHelp" class="form-text text-muted">Опубликовать или снять с публикации работу.</small>
+</div>
+
+{{--<div class="form-group custom-control custom-switch">--}}
+{{--    {{ Form::checkbox('published', 1, true, ['class' => 'custom-control-input']) }}--}}
+{{--    {{ Form::label('published', 'Опубликовать', ['class' => 'custom-control-label']) }}--}}
+{{--</div>--}}
+
 <div class="form-group">
     {{ Form::label('title', 'Заголовок') }}
     {{--                    @error('title')--}}

@@ -10,7 +10,6 @@
     <meta name="csrf-param" content="_token" />
 
     <link rel="stylesheet" href="{{ mix('/css/manage.css') }}">
-    <script defer src="{{ mix('/js/manage.js') }}"></script>
     <title>Управление контентом</title>
 
 </head>
@@ -43,6 +42,8 @@
 
 {{--<script src="js/jquery-3.js"></script>--}}
 {{--<script src="js/bootstrap.js"></script>--}}
+
+<script defer src="{{ mix('/js/manage.js') }}"></script>
 
 </body>
 </html>

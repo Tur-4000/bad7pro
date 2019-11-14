@@ -2084,7 +2084,7 @@ __webpack_require__(/*! ./comingsoon/Clarendon_LT_Std_700.font */ "./resources/j
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/tur/prj/bad7pro/resources/js/cs.js */"./resources/js/cs.js");
+module.exports = __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\js\cs.js */"./resources/js/cs.js");
 
 
 /***/ })

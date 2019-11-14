@@ -37542,7 +37542,7 @@ __webpack_require__(/*! jquery-ujs */ "./node_modules/jquery-ujs/src/rails.js");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/tur/prj/bad7pro/resources/js/manage.js */"./resources/js/manage.js");
+module.exports = __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\js\manage.js */"./resources/js/manage.js");
 
 
 /***/ })

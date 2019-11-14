@@ -25,6 +25,7 @@
             <th scope="col">Тип</th>
             <th scope="col">Дата</th>
             <th scope="col">URL</th>
+            <th scope="col">Опубликовано</th>
             <th></th>
         </tr>
         </thead>
@@ -42,6 +43,11 @@
             <td>{{ Carbon\Carbon::parse($item->date)->toFormattedDateString() }}</td>
             <td>{{ $item->url }}</td>
             <td>
+                @if($item->published)
+                    Да
+                @endif
+            </td>
+            <td>
                 <a href="{{ route('manage.portfolio.destroy', $item->id) }}"
                    data-confirm="Вы действительно хотите удалить запись: {{ $item->title }}?"
                    data-method="delete"
@@ -50,6 +56,7 @@
                     Удалить
                 </a>
             </td>
+
         </tr>
 @endforeach
         </tbody>
