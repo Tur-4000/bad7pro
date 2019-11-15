@@ -8,8 +8,9 @@
 .main__info {
     grid-column: span 1;
     grid-row: span 1;
-    padding: 0 2em;
-    margin: 47% 0 53% 0;
+    padding: 0 2rem;
+    //margin: 47% 0 53% 0;
+    margin: auto 0;
     text-align: center;
 }
 
@@ -19,6 +20,7 @@
     line-height: 1;
     font-size: 40px;
     font-weight: 700;
+    margin-top: 0;
 
     span {
         font-size: 30px;
@@ -99,6 +101,7 @@
 
     .main {
         grid-template-columns: 1fr;
+        height: 89vh;
     }
 
     .main__info {
@@ -106,7 +109,8 @@
         grid-column: span 1;
         grid-row: span 1;
         margin-top: 5%;
-        margin-bottom: 10%;
+        margin-bottom: auto;
+        //max-height: 100%;
 
         .main__text {
             margin-top: 5%;

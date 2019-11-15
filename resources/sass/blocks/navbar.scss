@@ -11,7 +11,7 @@
 }
 
 .navbar__logo {
-    margin: 1em auto 0 auto;
+    margin: 1rem auto 0 1.5rem;
 }
 
 .logo__link {
@@ -27,7 +27,7 @@
 .navbar__list {
     display: flex;
     flex-direction: column;
-    margin-top: 5em;
+    margin-top: 5rem;
     list-style: none;
     padding: 0;
 }
@@ -39,7 +39,7 @@
 .navbar__socials {
     display: block;
     margin-top: 10%;
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
     margin-right: auto;
 }
 
@@ -60,7 +60,7 @@
     }
 
     .navbar__logo {
-        margin: auto auto auto 1em;
+        margin: auto auto auto 1rem;
         //margin-left: 1em;
         //margin-right: 0;
         order: 1;
