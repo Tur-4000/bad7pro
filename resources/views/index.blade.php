@@ -6,8 +6,11 @@
         <div class="main__info">
             <h1 class="main__title">
                 <!--            Видеостудия<br> -->
-                bad7<br>
-                <span>production</span>
+{{--                bad7<br>--}}
+{{--                <span>production</span>--}}
+                <svg class="main__img">
+                    <use xlink:href="/images/BAD7_logo.svg#full_logo"></use>
+                </svg>
             </h1>
             <p class="main__text">
                 Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).<br>

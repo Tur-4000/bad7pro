@@ -1,7 +1,13 @@
 <nav class="navbar">
 
     <div class="navbar__logo">
-        <a href="/" class="logo__link">bad7pro</a>
+{{--        <a href="/" class="logo__link">bad7pro</a>--}}
+        <a href="/" class="logo__link">
+{{--            <img class="logo__img" src="/images/BAD7_logo.svg" alt="logo">--}}
+            <svg class="logo__img">
+                <use xlink:href="/images/BAD7_logo.svg#full_logo"></use>
+            </svg>
+        </a>
     </div>
 
     <ul class="navbar__list list">
