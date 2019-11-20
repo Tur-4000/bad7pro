@@ -4,7 +4,7 @@
     justify-content: flex-start;
     //padding-left: 2em;
     //padding-right: 2em;
-    padding: 2em;
+    padding: 2rem;
     background-color: #ddd;
 }
 
@@ -130,3 +130,10 @@
     background-size: cover;
 }
 
+@media (max-width: 980px) {
+
+    .card {
+        padding: 1rem;
+    }
+
+}

@@ -1043,15 +1043,28 @@ body {
 .services__content {
   display: grid;
   grid-template-columns: repeat(2, minmax(320px, auto));
-  grid-gap: 1em;
+  grid-gap: 1rem;
   -webkit-box-pack: center;
           justify-content: center;
-  padding: 2% 10%;
+  padding: 2% 5%;
 }
 
 .services__card {
   grid-column: span 1;
   grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+  .services__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .services__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .card {
@@ -1062,7 +1075,7 @@ body {
           flex-direction: column;
   -webkit-box-pack: start;
           justify-content: flex-start;
-  padding: 2em;
+  padding: 2rem;
   background-color: #ddd;
 }
 
@@ -1174,6 +1187,12 @@ body {
 .card__head--promotion {
   background: url(/images/SEO15.jpg?6b1457585722cc32d52c2ff885c4225d) center no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 980px) {
+  .card {
+    padding: 1rem;
+  }
 }
 
 .portfolio {
