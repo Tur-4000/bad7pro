@@ -1091,11 +1091,56 @@ body {
   font-weight: normal;
 }
 
+.card__subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .card__text {
   min-height: 120px;
   line-height: 1.5;
   margin-bottom: 5%;
   text-align: justify;
+}
+
+.card__text p {
+  margin: 0.4rem 0;
+}
+
+.card__text--hide label {
+  font-size: 0.8rem;
+  color: #333333;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #333333;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-property: color, border;
+  transition-property: color, border;
+}
+
+.card__text--hide label:hover {
+  color: red;
+  border-color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.hide + label ~ p {
+  display: none;
+}
+
+.hide:checked + label {
+  color: #ffc107;
+  border-bottom: 0;
+}
+
+.hide:checked + label ~ p {
+  display: inline-block;
 }
 
 .card__btn {
