@@ -23,7 +23,28 @@
 .portfolio__works {
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+
+    .portfolio__works {
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .portfolio__works {
+        grid-template-columns: 1fr;
+    }
+
 }

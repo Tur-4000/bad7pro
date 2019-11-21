@@ -42,3 +42,29 @@
         color: red;
     }
 }
+
+@media (max-width: 768px) {
+
+    .filter__link {
+        padding: 2% 15%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .filter {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .filter__element {
+        width: 100%;
+    }
+
+    .filter__link {
+        padding: 2% 33%;
+    }
+
+}
