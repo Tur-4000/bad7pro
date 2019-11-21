@@ -1,3 +1,17 @@
+.contacts {
+    max-height: 100vh;
+}
+
+.contacts__title {
+    display: block;
+    text-align: center;
+}
+
+.contacts__form {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .contacts__element {
     margin: 0 auto;
     padding: 0;

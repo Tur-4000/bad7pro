@@ -711,6 +711,20 @@ body {
   fill: #ffc107;
 }
 
+.contacts {
+  max-height: 100vh;
+}
+
+.contacts__title {
+  display: block;
+  text-align: center;
+}
+
+.contacts__form {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .contacts__element {
   margin: 0 auto;
   padding: 0;
@@ -1387,5 +1401,67 @@ body {
 .works__description {
   color: white;
   overflow: hidden;
+}
+
+.form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.form__help {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0 0 0 26%;
+}
+
+.form__element {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.form__element label {
+  align-self: start;
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.form__element input:not(.form__button),
+.form__element textarea {
+  display: inline-block;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  width: 74%;
+}
+
+.form__element input:not(.form__button):focus,
+.form__element textarea:focus {
+  border-bottom: 2px solid #ffc107;
+}
+
+.form__element .form__button {
+  display: block;
+  margin: 0 0 0 auto;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 2px solid #333333;
+  border-radius: 1.5rem;
+}
+
+.form__element .form__button:hover {
+  cursor: pointer;
+  color: #ffc107;
+  background: #333333;
+}
+
+.form__element .form__button:focus {
+  color: #ffc107;
+  background: black;
+  border-bottom: 2px solid #333333;
 }
 
