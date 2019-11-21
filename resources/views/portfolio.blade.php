@@ -27,15 +27,18 @@
             <li class="works__element">
                 <div class="works__video">
                     <iframe width="368" height="207" src="{{ $item->url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <div class="works__info">
+                        <h2 class="works__title">{{ $item->title }}</h2>
+                        <p class="works__details">
+                            <time class="works__date" datetime="{{ $item->date }}">{{ Carbon\Carbon::parse($item->date)->toFormattedDateString() }}</time>
+                            <span class="works__type">{{ $type[$item->type] }}</span>
+                        </p>
+                        <p class="works__description">{{ $item->description }}</p>
+                    </div>
+
                 </div>
-                <div class="works__info">
-                    <h2 class="works__title">{{ $item->title }}</h2>
-                    <p class="works__details">
-                        <time class="works__date" datetime="{{ $item->date }}">{{ Carbon\Carbon::parse($item->date)->toFormattedDateString() }}</time>
-                        <span class="works__type">{{ $type[$item->type] }}</span>
-                    </p>
-                    <p class="works__description">{{ $item->description }}</p>
-                </div>
+
             </li>
         @endforeach
 
