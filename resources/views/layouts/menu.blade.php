@@ -60,7 +60,7 @@
         <span class="hamburger__element"></span>
     </div>
 
-    <ul class="navbar__contacts contacts">
+    <ul class="navbar__contacts">
         <li class="contacts__element">
             <a href="mailto:sales@bad7.pro" class="contacts__link">sales@bad7.pro</a>
         </li>
