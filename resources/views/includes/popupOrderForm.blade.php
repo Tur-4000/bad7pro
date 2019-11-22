@@ -12,8 +12,8 @@
     <p class="popupOrderForm__help">Укажите название компании</p>
 </div>
 <div class="popupOrderForm__element">
-    {{ Form::label('order', 'я хочу') }}
-    {{ Form::textarea('order', null, ['class' => 'form__control', 'rows' => 5]) }}
+    {{ Form::label('description', 'я хочу') }}
+    {{ Form::textarea('description', null, ['class' => 'form__control', 'rows' => 5]) }}
 </div>
 <div class="popupOrderForm__element">
     {{ Form::label('contact', 'со мной можно связаться') }}

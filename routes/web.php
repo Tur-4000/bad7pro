@@ -20,6 +20,7 @@ Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/portfolio/{workType}', 'PortfolioController@filter')->name('portfolio.filter');
 Route::get('/contacts', 'ContactsController@index')->name('contacts');
 Route::get('/vacancies', 'VacanciesController@index')->name('vacancies.index');
+Route::post('/order/add', 'OrderController@store')->name('order.add');
 
 
 // Маршруты админки
