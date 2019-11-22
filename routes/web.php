@@ -24,9 +24,13 @@ Route::post('/order/add', 'OrderController@store')->name('order.add');
 
 
 // Маршруты админки
-Route::get('/manage', function () {
-    return view('manage.index');
-})->name('manage.index');
+//Route::get('/manage', function () {
+//    return view('manage.index');
+//})->name('manage.index');
+
+Route::get('/manage', 'Manage\ManageOrderController@index')->name('manage.index');
+
+
 
 Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
     ->only('index', 'create', 'store', 'edit', 'update', 'destroy')

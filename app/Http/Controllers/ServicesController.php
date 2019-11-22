@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
@@ -9,6 +10,7 @@ class ServicesController extends Controller
     public function index() {
         $title = 'Услуги';
         $services = true;
-        return view('services', compact('title', 'services'));
+        $order = new Order();
+        return view('services', compact('title', 'services', 'order'));
     }
 }

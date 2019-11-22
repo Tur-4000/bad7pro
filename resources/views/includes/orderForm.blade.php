@@ -1,4 +1,4 @@
-{{ Form::open(['url' => '#', 'method' => 'GET']) }}
+{{ Form::model($order, ['route' => 'order.add', 'method' => 'POST']) }}
 <div class="form__element">
     {{ Form::label('name', 'Привет, меня зовут') }}
     {{ Form::text('name', null, ['class' => 'form__control', 'aria-describedby' => 'nameHelp']) }}
@@ -10,8 +10,8 @@
     <p class="form__help">Укажите название компании</p>
 </div>
 <div class="form__element">
-    {{ Form::label('order', 'я хочу') }}
-    {{ Form::textarea('order', null, ['class' => 'form__control', 'rows' => 5]) }}
+    {{ Form::label('description', 'я хочу') }}
+    {{ Form::textarea('description', null, ['class' => 'form__control', 'rows' => 5]) }}
 </div>
 <div class="form__element">
     {{ Form::label('contact', 'со мной можно связаться') }}

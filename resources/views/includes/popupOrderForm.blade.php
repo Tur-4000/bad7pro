@@ -1,4 +1,4 @@
-{{ Form::open(['url' => '#', 'method' => 'GET']) }}
+{{ Form::model($order, ['route' => 'order.add', 'method' => 'POST']) }}
 <p style="text-align: right;"><a class="popup-modal-dismiss" href="#">Закрыть</a></p>
 <h2>Форма обратной связи</h2>
 <div class="popupOrderForm__element">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
@@ -9,6 +10,7 @@ class ContactsController extends Controller
     public function index() {
         $title = 'Наши контакты';
         $contacts = true;
-        return view('contacts', compact('title', 'contacts'));
+        $order = new Order();
+        return view('contacts', compact('title', 'contacts', 'order'));
     }
 }
