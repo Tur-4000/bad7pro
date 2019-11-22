@@ -29,7 +29,7 @@
                             социальных сетях, на сайте, на Youtube. Ролик будет продавать ваш товар (услугу) 24/7.</p>
                     </div>
                 </div>
-                <button class="card__btn">Закажи меня</button>
+                <a href="#order-form" class="card__btn popup-with-form">Закажи меня</a>
             </div>
             <div class="services__card card">
                 <div class="card__head card__head--image">
@@ -57,7 +57,7 @@
                             привлекая талантливых претендентов.</p>
                     </div>
                 </div>
-                <button class="card__btn">Закажи меня</button>
+                <a href="#order-form" class="card__btn popup-with-form">Закажи меня</a>
             </div>
             <div class="services__card card">
                 <div class="card__head card__head--translation"></div>
@@ -68,7 +68,7 @@
                     <p>Подготовим всё необходимое для проведения прямой трансляции Вашего мероприятия,
                         оставим Вас довольными полученным результатом.</p>
                 </div>
-                <button class="card__btn">Закажи меня</button>
+                <a href="#order-form" class="card__btn popup-with-form">Закажи меня</a>
             </div>
             <div class="services__card card">
                 <div class="card__head card__head--promotion"></div>
@@ -80,8 +80,23 @@
                         компанией или товаром (услугой). Также продвижение в сети является одним из ключевых этапов
                         на пути популяризации идеи, заложенной в ролике.</p>
                 </div>
-                <button class="card__btn">Закажи меня</button>
+                <a href="#order-form" class="card__btn popup-with-form">Закажи меня</a>
             </div>
         </div>
     </section>
+
+    <div id="order-form" class="white-popup mfp-hide popupOrderForm">
+        @include('includes.popupOrderForm')
+    </div>
+
 @endsection
+
+
+{{--@section('scripts')--}}
+{{--    <script defer>--}}
+{{--        $('.popup-with-form').magnificPopup({--}}
+{{--            type: 'inline',--}}
+{{--            focus: '#name'--}}
+{{--        });--}}
+{{--    </script>--}}
+{{--@endsection--}}

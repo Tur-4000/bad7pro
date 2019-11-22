@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "jquery-ujs": "^1.2.2"
+        "jquery-ujs": "^1.2.2",
+        "magnific-popup": "^1.1.0"
     }
 }

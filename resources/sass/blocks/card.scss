@@ -101,11 +101,14 @@
     box-sizing: border-box;
     padding: 3%;
     color: $primary;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     transition-property: color, background-color;
     transition-duration: 500ms;
 
     &:hover {
+        cursor: pointer;
         background: $black;
         color: $activeColor;
     }
