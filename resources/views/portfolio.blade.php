@@ -32,7 +32,7 @@
                         <h2 class="works__title">{{ $item->title }}</h2>
                         <p class="works__details">
 {{--                            <time class="works__date" datetime="{{ $item->date }}">{{ Carbon\Carbon::parse($item->date)->toFormattedDateString() }}</time>--}}
-                            <time class="works__date" datetime="{{ $item->date }}">{{ Date::parse($item->date)->format('j M Y г.') }}</time>
+                            <time class="works__date" datetime="{{ $item->date }}">{{ Date::parse($item->date)->format('F Y г.') }}</time>
                             <span class="works__type">{{ $type[$item->type] }}</span>
                         </p>
                         <p class="works__description">{{ $item->description }}</p>

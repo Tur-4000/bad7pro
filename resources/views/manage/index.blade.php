@@ -32,14 +32,13 @@
                 <th scope="row">
                     <a href="
                         @if(!request()->is('manage/order/deleted'))
-                            {{ route('manage.order.show', $item) }}">
+                            {{ route('manage.order.show', $item) }}">{{ $item->id }}
                         @else
                             {{ route('manage.order.restore', $item) }}"
                             data-confirm="Вы действительно хотите восстановить зявку № {{ $item->id }} от {{ $item->name }}?"
                             data-method="patch"
-                            rel="nofollow">
+                            rel="nofollow">Восстановить
                         @endif
-                        {{ $item->id }}
                     </a>
                 </th>
                 <td>{{ $item->name }}</td>
