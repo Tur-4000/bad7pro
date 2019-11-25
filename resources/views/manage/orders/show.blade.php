@@ -27,8 +27,9 @@
         <div class="col-4">
             <div class="card">
                 <div class="card-body">
-                    <p class="card-text">Создана: {{ Carbon\Carbon::parse($order->created_at)->toFormattedDateString() }}</p>
-                    <p class="card-text">Изменена: {{ Carbon\Carbon::parse($order->updated_at)->toFormattedDateString() }}</p>
+{{--                    <p class="card-text">Создана: {{ Carbon\Carbon::parse($order->created_at)->toFormattedDateString() }}</p>--}}
+                    <p class="card-text">Создана: {{ Date::parse($order->created_at)->format('j M Y г.') }}</p>
+                    <p class="card-text">Изменена: {{ Date::parse($order->updated_at)->format('j M Y г.') }}</p>
                 </div>
             </div>
             <div class="card mt-3">
