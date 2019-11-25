@@ -2,9 +2,16 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-10">
+    <div class="row justify-content-between">
+        <div class="col-6">
             <h1>Заявки</h1>
+        </div>
+        <div class="col-4 d-flex" style="justify-content: end;align-items: center">
+            @if(!request()->is('manage/order/deleted'))
+                <a href="{{ route('manage.order.deleted') }}" class="">Показать удалённые</a>
+            @else
+                <a href="{{ route('manage.index') }}" class="">Все заявки</a>
+            @endif
         </div>
     </div>
 
@@ -22,7 +29,19 @@
         <tbody>
         @foreach($orders as $item)
             <tr>
-                <th scope="row"><a href="{{ route('manage.order.show', $item) }}">{{ $item->id }}</a></th>
+                <th scope="row">
+                    <a href="
+                        @if(!request()->is('manage/order/deleted'))
+                            {{ route('manage.order.show', $item) }}">
+                        @else
+                            {{ route('manage.order.restore', $item) }}"
+                            data-confirm="Вы действительно хотите восстановить зявку № {{ $item->id }} от {{ $item->name }}?"
+                            data-method="patch"
+                            rel="nofollow">
+                        @endif
+                        {{ $item->id }}
+                    </a>
+                </th>
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->company }}</td>
                 <td>{{ $item->description }}</td>

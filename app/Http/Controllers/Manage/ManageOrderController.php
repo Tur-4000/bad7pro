@@ -23,6 +23,32 @@ class ManageOrderController extends Controller
         return view('manage.index', compact('orders'));
     }
 
+    public function deleted()
+    {
+        $orders = Order::onlyTrashed()
+            ->select('id', 'name', 'description', 'note', 'company', 'contact')
+            ->orderBy('id', 'DESC')
+            ->paginate();
+
+        return view('manage.index', compact('orders'));
+    }
+
+    /**
+     * Restore deleted resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore($id)
+    {
+        $order = Order::withTrashed()->where('id', $id);
+        if ($order) {
+            $order->restore();
+        }
+
+        return redirect()->route('manage.index');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -77,6 +103,7 @@ class ManageOrderController extends Controller
         if ($order) {
             $order->delete();
         }
+
         return redirect()->route('manage.index');
     }
 }
