@@ -22,7 +22,7 @@
         <tbody>
         @foreach($orders as $item)
             <tr>
-                <th scope="row">{{ $item->id }}</th>
+                <th scope="row"><a href="{{ route('manage.order.show', $item) }}">{{ $item->id }}</a></th>
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->company }}</td>
                 <td>{{ $item->description }}</td>
@@ -32,5 +32,7 @@
         @endforeach
         </tbody>
     </table>
+
+    {{ $orders->links() }}
 
 @endsection

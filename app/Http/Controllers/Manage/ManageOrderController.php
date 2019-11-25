@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateOrderRequest;
 use Illuminate\Http\Request;
 use App\Order;
 
@@ -15,30 +16,11 @@ class ManageOrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::select('*')->orderBy('id', 'DESC')->get();
-//        dd(__METHOD__, $orders);
+        $orders = Order::select('id', 'name', 'description', 'note', 'company', 'contact')
+            ->orderBy('id', 'DESC')
+            ->paginate();
+
         return view('manage.index', compact('orders'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        dd(__METHOD__);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        dd(__METHOD__);
     }
 
     /**
@@ -49,7 +31,9 @@ class ManageOrderController extends Controller
      */
     public function show($id)
     {
-        dd(__METHOD__);
+        $order = Order::findOrFail($id);
+
+        return view('manage.orders.show', compact('order'));
     }
 
     /**
@@ -60,7 +44,9 @@ class ManageOrderController extends Controller
      */
     public function edit($id)
     {
-        dd(__METHOD__);
+        $order = Order::findOrFail($id);
+
+        return view('manage.orders.edit', compact('order'));
     }
 
     /**
@@ -70,9 +56,13 @@ class ManageOrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateOrderRequest $request, $id)
     {
-        dd(__METHOD__);
+        $order = Order::findOrFail($id);
+        $order->note = $request->note;
+        $order->save();
+
+        return redirect()->route('manage.order.show', $order);
     }
 
     /**
@@ -83,6 +73,10 @@ class ManageOrderController extends Controller
      */
     public function destroy($id)
     {
-        dd(__METHOD__);
+        $order = Order::find($id);
+        if ($order) {
+            $order->delete();
+        }
+        return redirect()->route('manage.index');
     }
 }
