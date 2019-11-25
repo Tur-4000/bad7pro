@@ -11,16 +11,16 @@
     </div>
 
     <ul class="navbar__list list">
-        <li class="list__element @isset($services) list__element--active @endisset">
+        <li class="list__element {{ request()->is('services') ? 'list__element--active' : null }}">
             <a href="{{ route('services') }}" class="list__link">Услуги</a>
         </li>
-        <li class="list__element @isset($portfolio) list__element--active @endisset">
+        <li class="list__element {{ request()->is('portfolio') ? 'list__element--active' : null }}">
             <a href="{{ route('portfolio') }}" class="list__link">Работы</a>
         </li>
-        <li class="list__element @isset($contacts) list__element--active @endisset">
+        <li class="list__element {{ request()->is('contacts') ? 'list__element--active' : null }}">
             <a href="{{ route('contacts') }}" class="list__link">Контакты</a>
         </li>
-        <li class="list__element @isset($vacancies) list__element--active @endisset">
+        <li class="list__element {{ request()->is('vacancies.index') ? 'list__element--active' : null }}">
             <a href="{{ route('vacancies.index') }}" class="list__link">Карьера</a>
         </li>
     </ul>
