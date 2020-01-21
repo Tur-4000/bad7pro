@@ -9,7 +9,10 @@
     width: 100%;
     text-align: center;
 
-    background-color: #869791;
+    background: url("../../img/works-banner.jpg") center no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    //background-color: #869791;
 
     h1 {
         height: 15%;

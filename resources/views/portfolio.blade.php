@@ -7,7 +7,7 @@
 
     <section class="portfolio">
         <div class="portfolio__header">
-            <h1>Наши работы</h1>
+{{--            <h1>Наши работы</h1>--}}
         </div>
         <ul class="portfolio__filter filter">
 {{--            <li class="filter__element @isset($workType) filter__element--active @endisset ">--}}

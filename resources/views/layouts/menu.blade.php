@@ -20,9 +20,9 @@
         <li class="list__element {{ request()->is('contacts') ? 'list__element--active' : null }}">
             <a href="{{ route('contacts') }}" class="list__link">Контакты</a>
         </li>
-        <li class="list__element {{ request()->is('vacancies.index') ? 'list__element--active' : null }}">
-            <a href="{{ route('vacancies.index') }}" class="list__link">Карьера</a>
-        </li>
+{{--        <li class="list__element {{ request()->is('vacancies.index') ? 'list__element--active' : null }}">--}}
+{{--            <a href="{{ route('vacancies.index') }}" class="list__link">Карьера</a>--}}
+{{--        </li>--}}
     </ul>
 
     <ul class="navbar__socials socials">

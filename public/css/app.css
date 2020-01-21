@@ -1085,9 +1085,9 @@ body {
 
 .services__header {
   height: 18em;
-  background: url(/images/services-banner.jpg?bc1a4136a1508b154686708d7c26d875) center no-repeat;
+  background: url(/images/services-banner.jpg?ac812e417bfcfade1618c20c74b4d6e8) center no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
   margin-bottom: 30px;
 }
 
@@ -1259,7 +1259,9 @@ body {
   height: 18em;
   width: 100%;
   text-align: center;
-  background-color: #869791;
+  background: url(/images/works-banner.jpg?1a899a211a359ad1fd8a40cf5c66fa5c) center no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 
 .portfolio__header h1 {

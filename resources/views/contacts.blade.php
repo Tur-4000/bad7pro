@@ -21,9 +21,9 @@
                 <p><a href="tel:+380675965672" class="contacts__link">+38 (067) 596 56 72</a></p>
             </div>
             <div class="contacts__item">
-                <p>Сотрудничать с нами</p>
+{{--                <p>Сотрудничать с нами</p>--}}
                 <a href="mailto:sales@bad7.pro" class="contacts__link">sales@bad7.pro</a>
-                <p><a href="{{ route('vacancies.index') }}" class="contacts__link">Работать у нас</a></p>
+{{--                <p><a href="{{ route('vacancies.index') }}" class="contacts__link">Работать у нас</a></p>--}}
 {{--                <a href="mailto:superhero@bad7.pro" class="contacts__link">superhero@bad7.pro</a>--}}
             </div>
         </div>
