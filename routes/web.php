@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
 
+Route::get('/', 'MainPageController@index')->name('index');
 Route::get('/services', 'ServicesController@index')->name('services');
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/portfolio/{workType}', 'PortfolioController@filter')->name('portfolio.filter');

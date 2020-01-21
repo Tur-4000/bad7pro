@@ -21,6 +21,18 @@ $('.popup-with-form').magnificPopup({
     modal: true
 });
 
+$(document).ready(function() {
+    $('.popup-youtube').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
+});
+
 $(document).on('click', '.popup-modal-dismiss', function(e) {
     e.preventDefault();
     $.magnificPopup.close();

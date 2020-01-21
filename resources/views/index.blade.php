@@ -14,7 +14,8 @@
             </h1>
             <p class="main__text">
                 Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).<br>
-                <a href="#" class="main__link">сделать хорошо</a>
+                <a href="#order-form"  class="main__link popup-with-form">сделать хорошо</a>
+{{--                class="card__btn popup-with-form"--}}
             </p>
         </div>
 
@@ -22,14 +23,13 @@
             <div class="main__video--wrapper">
 
                 <div class="video">
-                    <button class="video__btn">
-                        <svg>
-                            <use xlink:href="/img/symbol/sprite.svg#play"></use>
-                        </svg>
-                    </button>
-                    <p class="video__text">
-                        video будет запускаться по кнопке
-                    </p>
+                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=Qv97VzXxUXc">
+                        <button class="video__btn">
+                            <svg>
+                                <use xlink:href="/img/symbol/sprite.svg#play"></use>
+                            </svg>
+                        </button>
+                    </a>
                 </div>
 
             </div>
@@ -62,6 +62,10 @@
 {{--            </div>--}}
 
         </div>
+    </div>
+
+    <div id="order-form" class="white-popup mfp-hide popupOrderForm">
+        @include('includes.popupOrderForm')
     </div>
 
 @endsection

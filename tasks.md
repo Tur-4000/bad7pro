@@ -5,13 +5,14 @@
 
 ## Главная
 
--- прикрутить проигрыватель
-
--- разместить видео https://youtu.be/Qv97VzXxUXc
-
 -- заполнить подвал (добавить логотипы клиентов)
 
--- обработчик кнопки "Сделать хорошо"
+v прикрутить проигрыватель
+
+v разместить видео https://youtu.be/Qv97VzXxUXc
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Qv97VzXxUXc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+v обработчик кнопки "Сделать хорошо"
 
 ## страница "Услуги"
 
@@ -21,7 +22,7 @@ v Рекламный - https://www.youtube.com/watch?v=35bnexjbBHk
 
 v Баннер
 
--- обработчик кнопки "Закажи меня"
+v обработчик кнопки "Закажи меня"
 
 ## Страница "Работы"
 
@@ -34,5 +35,5 @@ v Баннер
 
 -- добавить фоновое изображение
 
--- обработчик кнопки "Отправить"
+v обработчик кнопки "Отправить"
 
