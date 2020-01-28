@@ -41,6 +41,6 @@ Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
     ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
     ->names('manage.portfolio');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
