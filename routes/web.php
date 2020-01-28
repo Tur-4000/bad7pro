@@ -40,3 +40,7 @@ Route::resource('/manage/order', 'Manage\ManageOrderController')
 Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
     ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
     ->names('manage.portfolio');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
