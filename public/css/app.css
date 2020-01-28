@@ -1282,7 +1282,7 @@ body {
           align-items: center;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 1%;
 }
 
 @media (max-width: 768px) {
@@ -1505,6 +1505,55 @@ body {
   color: #ffc107;
   background: black;
   border-bottom: 2px solid #333333;
+}
+
+.pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  list-style: none;
+  padding: 0;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.page-link {
+  color: white;
+  background-color: #333333;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 1rem;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.page-link:hover {
+  color: red;
+  background-color: #000;
+}
+
+.active > .page-link {
+  color: #ffc107;
+  background-color: #333333;
+}
+
+.disabled > .page-link {
+  color: grey;
+  background-color: #333333;
+}
+
+.disabled > .page-link:hover {
+  color: grey;
+  background-color: #333333;
 }
 
 /* Magnific Popup CSS */

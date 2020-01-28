@@ -11,7 +11,7 @@ class PortfolioController extends Controller
         $title = 'Наши работы';
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
         $workType = '';
-        $portfolio = Portfolio::where('published', 1)->get();
+        $portfolio = Portfolio::where('published', 1)->paginate(4);
         return view('portfolio', compact('title', 'portfolio', 'type', 'workType'));
     }
 
@@ -19,7 +19,7 @@ class PortfolioController extends Controller
 //        dd(__METHOD__, $type);
         $title = 'Наши работы';
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
-        $portfolio = Portfolio::where('published', 1)->where('type', '=', $workType)->get();
+        $portfolio = Portfolio::where('published', 1)->where('type', '=', $workType)->paginate(4);
         return view('portfolio', compact('title', 'portfolio', 'type', 'workType'));
     }
 }

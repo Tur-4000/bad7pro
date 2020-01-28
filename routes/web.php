@@ -29,7 +29,7 @@ Route::get('/vacancies', 'VacanciesController@index')->name('vacancies.index');
 //    return view('manage.index');
 //})->name('manage.index');
 
-Route::get('/manage', 'Manage\ManageOrderController@index')->name('manage.index');
+Route::get('/manage', 'Manage\ManageOrderController@index')->name('manage.index')->middleware('auth');
 Route::get('/manage/order/deleted', 'Manage\ManageOrderController@deleted')->name('manage.order.deleted');
 Route::patch('/manage/order/{id}/restore', 'Manage\ManageOrderController@restore')->name('manage.order.restore');
 Route::resource('/manage/order', 'Manage\ManageOrderController')

@@ -44,6 +44,12 @@
         @endforeach
 
         </ul>
+
+        @if($portfolio->total() > $portfolio->count())
+            {{ $portfolio->links() }}
+        @endif
+
+
     </section>
 
 @endsection
