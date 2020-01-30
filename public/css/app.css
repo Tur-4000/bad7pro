@@ -718,6 +718,8 @@ body {
   -webkit-box-direction: normal;
           flex-direction: column;
   min-height: 100vh;
+  background: url("/images/contact-bg1.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 .contacts__title {
