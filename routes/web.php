@@ -21,7 +21,7 @@ Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/portfolio/{workType}', 'PortfolioController@filter')->name('portfolio.filter');
 Route::get('/contacts', 'ContactsController@index')->name('contacts');
 Route::post('/order/add', 'OrderController@store')->name('order.add');
-Route::get('/vacancies', 'VacanciesController@index')->name('vacancies.index');
+//Route::get('/vacancies', 'VacanciesController@index')->name('vacancies.index');
 
 
 // Маршруты админки
@@ -36,11 +36,14 @@ Route::resource('/manage/order', 'Manage\ManageOrderController')
     ->only('show', 'edit', 'update', 'destroy', 'deleted')
     ->names('manage.order');
 
-
 Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
     ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
     ->names('manage.portfolio');
 
+Route::resource('/manage/user', 'Manage\ManageUserController')
+    ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
+    ->names('manage.user');
+
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
