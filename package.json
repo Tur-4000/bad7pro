@@ -26,6 +26,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0",
         "jquery-ujs": "^1.2.2",
         "magnific-popup": "^1.1.0"
     }

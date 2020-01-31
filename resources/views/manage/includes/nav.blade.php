@@ -18,9 +18,18 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Администрирование</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="{{ route('manage.user.index') }}">Пользователи</a>
-                    <a class="dropdown-item" href="#">Роли</a>
-                    <a class="dropdown-item" href="#">Разрешения</a>
+                    <a class="dropdown-item" href="{{ route('manage.user.index') }}">
+                        <i class="fas fa-user-friends"></i>
+                        Пользователи
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-tags"></i>
+                        Роли
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-lock"></i>
+                        Разрешения
+                    </a>
                 </div>
             </li>
         </ul>
@@ -29,14 +38,31 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Профиль</a>
-                    <a class="dropdown-item" href="#">Изменить пароль</a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-id-card-alt"></i>
+                        Профиль
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-key"></i>
+                        Изменить пароль
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();"
+                    >
+                        <i class="fas fa-sign-out-alt"></i>
+                        Выйти
+                    </a>
                 </div>
             </li>
         </ul>
     </div>
 </nav>
 
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    {{ csrf_field() }}
+</form>
 {{--<nav class="col-md-2 d-none d-md-block bg-light sidebar">--}}
 {{--    <div class="sidebar-sticky">--}}
 {{--        <ul class="nav flex-column">--}}

@@ -11,6 +11,7 @@
     <div class="row">
         <div class="col-12">
             <a href="{{ route('manage.portfolio.create') }}" class="btn btn-outline-success btn-sm float-right">
+                <i class="fas fa-plus-square"></i>
                 Добавить материал</a>
         </div>
     </div>
@@ -35,6 +36,7 @@
             <th scope="row">{{ $item->id }}</th>
             <td>
                 <a href="{{ route('manage.portfolio.edit', $item->id) }}">
+                    <i class="fas fa-edit"></i>
                     {{ $item->title }}
                 </a>
             </td>
@@ -44,7 +46,7 @@
             <td>{{ $item->url }}</td>
             <td>
                 @if($item->published)
-                    Да
+                    <i class="fas fa-check text-success"></i>
                 @endif
             </td>
             <td>
@@ -53,6 +55,7 @@
                    data-method="delete"
                    rel="nofollow"
                    class="text-danger">
+                    <i class="fas fa-trash-alt"></i>
                     Удалить
                 </a>
             </td>

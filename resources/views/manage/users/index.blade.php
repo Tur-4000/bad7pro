@@ -11,6 +11,7 @@
     <div class="row">
         <div class="col-12">
             <a href="{{ route('manage.user.create') }}" class="btn btn-outline-success btn-sm float-right">
+                <i class="fas fa-user-plus"></i>
                 Добавить пользователя</a>
         </div>
     </div>
@@ -28,10 +29,17 @@
         @foreach($users as $item)
             <tr>
                 <th scope="row">
-                    <a href="{{ route('manage.user.edit', $item) }}">{{ $item->id }}</a>
+                    <a href="{{ route('manage.user.edit', $item) }}">
+                        {{ $item->id }}
+                        <i class="fas fa-user-edit"></i>
+{{--                        <i class="fas fa-edit"></i>--}}
+                    </a>
                 </th>
                 <td>
-                    <a href="{{ route('manage.user.show', $item) }}">{{ $item->name }}</a>
+                    <a href="{{ route('manage.user.show', $item) }}">
+                        <i class="fas fa-eye"></i>
+                        {{ $item->name }}
+                    </a>
                 </td>
                 <td>{{ $item->email }}</td>
                 <td>
@@ -40,6 +48,7 @@
                        data-method="delete"
                        rel="nofollow"
                        class="text-danger">
+                        <i class="fas fa-user-times"></i>
                         Удалить
                     </a>
                 </td>

@@ -31,8 +31,9 @@ class ManageUserController extends Controller
     public function create()
     {
         $user = new User();
+        $create = true;
 
-        return view('manage.users.create', compact('user'));
+        return view('manage.users.create', compact('user', 'create'));
     }
 
     /**
@@ -76,7 +77,9 @@ class ManageUserController extends Controller
     {
 //        dd(__METHOD__, $user);
 
-        return view('manage.users.edit', compact('user'));
+        $create = false;
+
+        return view('manage.users.edit', compact('user', 'create'));
     }
 
     /**
