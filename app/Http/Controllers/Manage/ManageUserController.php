@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -42,7 +44,7 @@ class ManageUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
 //        dd(__METHOD__, $request);
 
@@ -64,7 +66,9 @@ class ManageUserController extends Controller
      */
     public function show(User $user)
     {
-        dd(__METHOD__, $user);
+//        dd(__METHOD__, $user);
+
+        return view('manage.users.show', compact('user'));
     }
 
     /**
@@ -89,9 +93,15 @@ class ManageUserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UpdateUserRequest $request, User $user)
     {
-        dd(__METHOD__, $user, $request);
+//        dd(__METHOD__, $user, $request);
+
+        $user->fill($request->all());
+        $user->save();
+
+        return redirect()
+            ->route('manage.user.index');
     }
 
     /**

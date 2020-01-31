@@ -19,8 +19,8 @@
     </div>
 
     <div class="form-group">
-        {{ Form::label('passwordСonfirmation', 'Подтверждение пароля') }}
-        {{ Form::password('passwordСonfirmation', ['class' => 'form-control', 'aria-describedby' => 'passwordСonfirmationHelp']) }}
+        {{ Form::label('password_confirmation', 'Подтверждение пароля') }}
+        {{ Form::password('password_confirmation', ['class' => 'form-control', 'aria-describedby' => 'passwordСonfirmationHelp']) }}
         <small id="passwordСonfirmationHelp" class="form-text text-muted">Подтверждение пароля.</small>
     </div>
 
