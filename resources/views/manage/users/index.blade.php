@@ -21,16 +21,28 @@
             <th scope="col">#</th>
             <th scope="col">Имя</th>
             <th scope="col">eMail</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
         @foreach($users as $item)
             <tr>
                 <th scope="row">
-                    <a href="{{ route('manage.user.show', $item) }}">{{ $item->id }}</a>
+                    <a href="{{ route('manage.user.edit', $item) }}">{{ $item->id }}</a>
                 </th>
-                <td>{{ $item->name }}</td>
+                <td>
+                    <a href="{{ route('manage.user.show', $item) }}">{{ $item->name }}</a>
+                </td>
                 <td>{{ $item->email }}</td>
+                <td>
+                    <a href="{{ route('manage.user.destroy', $item->id) }}"
+                       data-confirm="Вы действительно хотите удалить пользователя: {{ $item->name }}?"
+                       data-method="delete"
+                       rel="nofollow"
+                       class="text-danger">
+                        Удалить
+                    </a>
+                </td>
             </tr>
         @endforeach
         </tbody>

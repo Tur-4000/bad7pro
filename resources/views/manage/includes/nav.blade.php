@@ -12,24 +12,28 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('manage.portfolio.index') }}">Работы</a>
             </li>
-{{--            <li class="nav-item dropdown">--}}
-{{--                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>--}}
-{{--                <div class="dropdown-menu" aria-labelledby="dropdown01">--}}
-{{--                    <a class="dropdown-item" href="#">Action</a>--}}
-{{--                    <a class="dropdown-item" href="#">Another action</a>--}}
-{{--                    <a class="dropdown-item" href="#">Something else here</a>--}}
-{{--                </div>--}}
-{{--            </li>--}}
         </ul>
+
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('manage.user.index') }}">Пользователи</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Администрирование</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="{{ route('manage.user.index') }}">Пользователи</a>
+                    <a class="dropdown-item" href="#">Роли</a>
+                    <a class="dropdown-item" href="#">Разрешения</a>
+                </div>
             </li>
         </ul>
-{{--        <form class="form-inline my-2 my-lg-0">--}}
-{{--            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">--}}
-{{--            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>--}}
-{{--        </form>--}}
+
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">Профиль</a>
+                    <a class="dropdown-item" href="#">Изменить пароль</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
 

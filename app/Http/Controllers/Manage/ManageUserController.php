@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Manage;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ManageUserController extends Controller
 {
@@ -15,8 +16,6 @@ class ManageUserController extends Controller
      */
     public function index()
     {
-//        dd(__METHOD__);
-
         $users = User::select('id', 'name', 'email')
             ->orderBy('id', 'ASC')
             ->paginate();
@@ -31,7 +30,9 @@ class ManageUserController extends Controller
      */
     public function create()
     {
-        dd(__METHOD__);
+        $user = new User();
+
+        return view('manage.users.create', compact('user'));
     }
 
     /**
@@ -42,7 +43,16 @@ class ManageUserController extends Controller
      */
     public function store(Request $request)
     {
-        dd(__METHOD__, $request);
+//        dd(__METHOD__, $request);
+
+        $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+
+        return redirect()
+            ->route('manage.user.index');
     }
 
     /**
@@ -64,7 +74,9 @@ class ManageUserController extends Controller
      */
     public function edit(User $user)
     {
-        dd(__METHOD__, $user);
+//        dd(__METHOD__, $user);
+
+        return view('manage.users.edit', compact('user'));
     }
 
     /**
@@ -85,8 +97,14 @@ class ManageUserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        dd(__METHOD__, $user);
+//        dd(__METHOD__, $id);
+
+        $user = User::find($id);
+        if ($user) {
+            $user->delete();
+        }
+        return redirect()->route('manage.user.index');
     }
 }
