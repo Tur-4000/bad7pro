@@ -42,7 +42,7 @@
                         <i class="fas fa-id-card-alt"></i>
                         Профиль
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('change-password') }}">
                         <i class="fas fa-key"></i>
                         Изменить пароль
                     </a>

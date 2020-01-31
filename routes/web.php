@@ -44,6 +44,9 @@ Route::resource('/manage/user', 'Manage\ManageUserController')
     ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
     ->names('manage.user');
 
+Route::get('change-password', 'Auth\ChangePasswordController@index')->name('change-password');
+Route::post('change-password', 'Auth\ChangePasswordController@store')->name('change-password.update');
+
 Auth::routes(['register' => false]);
 
 //Route::get('/home', 'HomeController@index')->name('home');
