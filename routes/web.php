@@ -40,13 +40,18 @@ Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
     ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
     ->names('manage.portfolio');
 
-Route::resource('/manage/user', 'Manage\ManageUserController')
-    ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
-    ->names('manage.user');
+
 
 Route::get('change-password', 'Auth\ChangePasswordController@index')->name('change-password');
 Route::post('change-password', 'Auth\ChangePasswordController@store')->name('change-password.update');
 
 Auth::routes(['register' => false]);
+
+Route::group( ['middleware' => ['auth']], function() {
+    Route::resource('/manage/user', 'Manage\ManageUserController')
+        ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
+        ->names('manage.user');
+    Route::resource('roles', 'Auth\RoleController')->names('manage.role');
+});
 
 //Route::get('/home', 'HomeController@index')->name('home');

@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('flash::message')
+
     <div class="row justify-content-between">
         <div class="col-6">
             <h1>Пользователи</h1>

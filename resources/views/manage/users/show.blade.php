@@ -5,6 +5,8 @@
     <div class="row justify-content-center mt-5">
         <div class="col-8">
 
+            @include('flash::message')
+
             @if ($errors->any())
                 @foreach ($errors->all() as $error)
                     <div class="alert alert-danger" role="alert">
@@ -16,7 +18,12 @@
             <div class="card">
                 <h3 class="card-header">{{ $user->name }}</h3>
                 <div class="card-body">
-                    <h4 class="card-title">e-Mail: {{ $user->email }}</h4>
+                    <h4 class="card-title"><b>eMail:</b> {{ $user->email }}</h4>
+                    <h4 class="card-text"><b>Роли:</b>
+                        @foreach($user->roles as $role)
+                            <span class="badge badge-info">{{ $role->name }} </span>
+                        @endforeach
+                    </h4>
                 </div>
             </div>
 

@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateUserRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Auth\Role;
 
 class ManageUserController extends Controller
 {
@@ -33,26 +34,36 @@ class ManageUserController extends Controller
     public function create()
     {
         $user = new User();
+        $roles = Role::pluck('name', 'id');
         $create = true;
 
-        return view('manage.users.create', compact('user', 'create'));
+        return view('manage.users.create', compact('user', 'create', 'roles'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreUserRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreUserRequest $request)
     {
 //        dd(__METHOD__, $request);
 
-        $user = User::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-        ]);
+        $request->merge(['password' => Hash::make($request->get('password'))]);
+
+        if ($user = User::create($request->except('roles'))) {
+            $this->syncPermissions($request, $user);
+            flash('User has been created.')->important();
+        } else {
+            flash()->error('Unable to create user.');
+        }
+
+//        $user = User::create([
+//            'name' => $request['name'],
+//            'email' => $request['email'],
+//            'password' => Hash::make($request['password']),
+//        ]);
 
         return redirect()
             ->route('manage.user.index');
@@ -119,5 +130,30 @@ class ManageUserController extends Controller
             $user->delete();
         }
         return redirect()->route('manage.user.index');
+    }
+
+    private function syncPermissions(Request $request, $user)
+    {
+//        dd($request->roles, $user);
+        // Get the submitted roles
+        $roles = $request->get('roles', []);
+
+//        $permissions = $request->get('permissions', []);
+
+        // Get the roles
+        $roles = Role::find($roles);
+//        dd($roles);
+        // check for current role changes
+//        if( ! $user->hasAllRoles($roles) ) {
+//            // reset all direct permissions for user
+//            $user->permissions()->sync([]);
+//        } else {
+//            // handle permissions
+//            $user->syncPermissions($permissions);
+//        }
+
+        $user->syncRoles($roles);
+//dd($user);
+        return $user;
     }
 }

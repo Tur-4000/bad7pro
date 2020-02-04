@@ -24,6 +24,24 @@
         <small id="passwordСonfirmationHelp" class="form-text text-muted">Подтверждение пароля.</small>
     </div>
 
+    <div class="form-group">
+        {{ Form::label('roles[]', 'Роль') }}
+        {{ Form::select(
+                'roles[]',
+                $roles,
+                null,
+                ['class' => 'form-control', 'multiple' => 'multiple', 'aria-describedby' => 'roleHelp']
+            ) }}
+        <small id="roleHelp" class="form-text text-muted">Роли пользователя. Определяют уровни доступа к разделам сайта и операциям.</small>
+    </div>
+
+
+{{--    <script>--}}
+{{--        tail.select('#roles', {--}}
+
+{{--        });--}}
+{{--    </script>--}}
+
 @endif
 {{--<div class="form-row">--}}
 {{--    <div class="form-group col-md-6">--}}
