@@ -54,9 +54,9 @@ class ManageUserController extends Controller
 
         if ($user = User::create($request->except('roles'))) {
             $this->syncPermissions($request, $user);
-            flash('User has been created.')->important();
+            flash('Новый пользователь успешно добавлен.')->important();
         } else {
-            flash()->error('Unable to create user.');
+            flash()->error('Невозможно создать пользователя.');
         }
 
 //        $user = User::create([
@@ -107,10 +107,12 @@ class ManageUserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        dd(__METHOD__, $user, $request);
+//        dd(__METHOD__, $user, $request);
 
-        $user->fill($request->all());
+        $user->fill($request->except('roles'));
+        $this->syncPermissions($request, $user);
         $user->save();
+        flash()->success('Информация о пользователе успешно обновлена.');
 
         return redirect()
             ->route('manage.user.show', $user);
@@ -126,9 +128,17 @@ class ManageUserController extends Controller
     {
 //        dd(__METHOD__, $id);
 
-        $user = User::find($id);
+        if ( \Auth::user()->id == $id ) {
+            flash()->warning('Удаление текущего залогиненого пользователя запрещено :(')->important();
+            return redirect()->back();
+        }
+
+        $user = User::findOrFail($id);
         if ($user) {
             $user->delete();
+            flash()->success("Пользователь <{$user->name}> удалён");
+        } else {
+            flash()->warning('User not deleted');
         }
         return redirect()->route('manage.user.index');
     }
