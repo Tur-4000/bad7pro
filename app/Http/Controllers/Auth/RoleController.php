@@ -15,7 +15,11 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $roles = Role::select('id', 'name', 'guard_name')
+            ->orderBy('id', 'ASC')
+            ->paginate();
+
+        return view('manage.roles.index', compact('roles'));
     }
 
     /**

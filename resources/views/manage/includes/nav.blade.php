@@ -22,7 +22,7 @@
                         <i class="fas fa-user-friends"></i>
                         Пользователи
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('manage.role.index') }}">
                         <i class="fas fa-tags"></i>
                         Роли
                     </a>
