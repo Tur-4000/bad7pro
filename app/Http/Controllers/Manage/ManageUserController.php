@@ -93,8 +93,9 @@ class ManageUserController extends Controller
 //        dd(__METHOD__, $user);
 
         $create = false;
+        $roles = Role::pluck('name', 'id');
 
-        return view('manage.users.edit', compact('user', 'create'));
+        return view('manage.users.edit', compact('user', 'create', 'roles'));
     }
 
     /**
@@ -106,13 +107,13 @@ class ManageUserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-//        dd(__METHOD__, $user, $request);
+        dd(__METHOD__, $user, $request);
 
         $user->fill($request->all());
         $user->save();
 
         return redirect()
-            ->route('manage.user.index');
+            ->route('manage.user.show', $user);
     }
 
     /**
