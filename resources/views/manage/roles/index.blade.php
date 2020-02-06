@@ -12,7 +12,7 @@
 
     <div class="row">
         <div class="col-12">
-            <a href="#" class="btn btn-outline-success btn-sm float-right">
+            <a href="{{ route('manage.role.create') }}" class="btn btn-outline-success btn-sm float-right">
                 <i class="fas fa-plus-square"></i>
                 Добавить роль</a>
         </div>
@@ -31,14 +31,14 @@
         @foreach($roles as $item)
             <tr>
                 <th scope="row">
-                    <a href="#">
+                    <a href="{{ route('manage.role.edit', $item) }}">
                         {{ $item->id }}
                         <i class="fas fa-edit"></i>
                         {{--                        <i class="fas fa-edit"></i>--}}
                     </a>
                 </th>
                 <td>
-                    <a href="#">
+                    <a href="{{ route('manage.role.show', $item) }}">
                         <i class="fas fa-eye"></i>
                         {{ $item->name }}
                     </a>

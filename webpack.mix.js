@@ -18,9 +18,6 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/manage.js', 'public/js')
     .sass('resources/sass/manage.scss', 'public/css');
 
-mix.js('resources/js/cs.js', 'public/js')
-    .sass('resources/sass/cs.scss', 'public/css');
-
 mix.copyDirectory('resources/img', 'public/images');
 
 mix.browserSync('127.0.0.1:8000');

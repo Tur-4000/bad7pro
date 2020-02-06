@@ -29,7 +29,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -40,7 +40,7 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd(__METHOD__, $request);
     }
 
     /**
@@ -51,7 +51,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        //
+        dd(__METHOD__, $role);
     }
 
     /**
@@ -62,7 +62,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        //
+        dd(__METHOD__, $role);
     }
 
     /**
@@ -74,7 +74,7 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        //
+        dd(__METHOD__, $role, $request);
     }
 
     /**
@@ -85,6 +85,6 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+        dd(__METHOD__, $role);
     }
 }

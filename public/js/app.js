@@ -12651,7 +12651,7 @@ $(document).on('click', '.popup-modal-dismiss', function (e) {
 //     $('.clients__carousel').owlCarousel({
 //         loop: true,
 //         autoWidth: true,
-//         margin: 10,
+//         margin: 50,
 //         nav: false,
 //         navText: [],
 //         dots: false,
@@ -12683,17 +12683,6 @@ $(document).on('click', '.popup-modal-dismiss', function (e) {
 
 /***/ }),
 
-/***/ "./resources/sass/cs.scss":
-/*!********************************!*\
-  !*** ./resources/sass/cs.scss ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/sass/manage.scss":
 /*!************************************!*\
   !*** ./resources/sass/manage.scss ***!
@@ -12706,16 +12695,15 @@ $(document).on('click', '.popup-modal-dismiss', function (e) {
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/manage.scss ./resources/sass/cs.scss ***!
-  \*******************************************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/manage.scss ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\sass\manage.scss */"./resources/sass/manage.scss");
-module.exports = __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\sass\cs.scss */"./resources/sass/cs.scss");
+module.exports = __webpack_require__(/*! D:\USR\OpenServer\OSPanel\domains\bad7pro.ukmig.local\resources\sass\manage.scss */"./resources/sass/manage.scss");
 
 
 /***/ })

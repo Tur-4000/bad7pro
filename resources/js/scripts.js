@@ -44,7 +44,7 @@ $(document).on('click', '.popup-modal-dismiss', function(e) {
 //     $('.clients__carousel').owlCarousel({
 //         loop: true,
 //         autoWidth: true,
-//         margin: 10,
+//         margin: 50,
 //         nav: false,
 //         navText: [],
 //         dots: false,

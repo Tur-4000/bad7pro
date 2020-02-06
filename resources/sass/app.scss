@@ -16,12 +16,7 @@
 
 @import "blocks/main";
 @import "blocks/video";
-
-// owl.Carousel
 //@import "blocks/clients";
-//@import "blocks/carousel/owl.carousel";
-//@import "blocks/carousel/owl.theme.default";
-//@import "~owl.carousel";
 
 @import "blocks/services";
 @import "blocks/card";
@@ -35,3 +30,6 @@
 // Magnific Popup v1.1.0
 @import "magnific_popap";
 @import "blocks/popupOrderForm";
+
+// owl.Carousel
+//@import "~owl.carousel";
