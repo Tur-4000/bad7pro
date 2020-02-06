@@ -12570,7 +12570,8 @@ $.magnificPopup.registerModule(RETINA_NS, {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./scripts */ "./resources/js/scripts.js");
+__webpack_require__(/*! ./scripts */ "./resources/js/scripts.js"); // require('./owl.carousel');
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -12644,11 +12645,14 @@ $(document).ready(function () {
 $(document).on('click', '.popup-modal-dismiss', function (e) {
   e.preventDefault();
   $.magnificPopup.close();
-}); // $(document).ready(function () {
-//     $('.carousel').owlCarousel({
+}); // require('owl.carousel');
+//
+// $(document).ready(function () {
+//     $('.clients__carousel').owlCarousel({
 //         loop: true,
-//         margin: 0,
-//         nav: true,
+//         autoWidth: true,
+//         margin: 10,
+//         nav: false,
 //         navText: [],
 //         dots: false,
 //         items: 5,

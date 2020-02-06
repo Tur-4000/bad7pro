@@ -38,11 +38,14 @@ $(document).on('click', '.popup-modal-dismiss', function(e) {
     $.magnificPopup.close();
 });
 
+// require('owl.carousel');
+//
 // $(document).ready(function () {
-//     $('.carousel').owlCarousel({
+//     $('.clients__carousel').owlCarousel({
 //         loop: true,
-//         margin: 0,
-//         nav: true,
+//         autoWidth: true,
+//         margin: 10,
+//         nav: false,
 //         navText: [],
 //         dots: false,
 //         items: 5,

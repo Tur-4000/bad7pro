@@ -3,20 +3,16 @@
 @section('content')
 
     <div class="main">
-        <div class="main__info">
-            <h1 class="main__title">
-                <!--            Видеостудия<br> -->
-{{--                bad7<br>--}}
-{{--                <span>production</span>--}}
-                <svg class="main__img">
-                    <use xlink:href="/images/BAD7_logo.svg#full_logo"></use>
-                </svg>
-            </h1>
-            <p class="main__text">
-                Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).<br>
-                <a href="#order-form"  class="main__link popup-with-form">сделать хорошо</a>
-{{--                class="card__btn popup-with-form"--}}
-            </p>
+        <div class="main__info main__info--wrapper">
+                <h1 class="main__title">
+                    <svg class="main__img">
+                        <use xlink:href="/images/BAD7_logo.svg#full_logo"></use>
+                    </svg>
+                </h1>
+                <p class="main__text">
+                    Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).<br>
+                    <a href="#order-form"  class="main__link popup-with-form">сделать хорошо</a>
+                </p>
         </div>
 
         <div class="main__video">
@@ -37,26 +33,27 @@
 
         <div class="main__partners">
             наши счастливые клиенты
-{{--            <div class="clients__carousel carousel owl-carousel owl-theme">--}}
-{{--                <div class="carousel__item">--}}
+
+{{--            <div class="clients__carousel owl-carousel owl-theme">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client1.png" alt="Клиент 1">--}}
 {{--                </div>--}}
-{{--                <div class="carousel__item">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client2.png" alt="Клиент 2">--}}
 {{--                </div>--}}
-{{--                <div class="carousel__item">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client3.png" alt="Клиент 3">--}}
 {{--                </div>--}}
-{{--                <div class="carousel__item">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client4.png" alt="Клиент 4">--}}
 {{--                </div>--}}
-{{--                <div class="carousel__item">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client5.png" alt="Клиент 5">--}}
 {{--                </div>--}}
-{{--                <div class="carousel__item">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client4.png" alt="Клиент 4">--}}
 {{--                </div>--}}
-{{--                <div class="carousel__item">--}}
+{{--                <div class="clients__carousel--item item">--}}
 {{--                    <img src="img/client5.png" alt="Клиент 5">--}}
 {{--                </div>--}}
 {{--            </div>--}}
