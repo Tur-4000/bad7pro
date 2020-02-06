@@ -51,7 +51,9 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::resource('/manage/user', 'Manage\ManageUserController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
         ->names('manage.user');
-    Route::resource('roles', 'Auth\RoleController')->names('manage.role');
+    Route::resource('roles', 'Auth\RoleController')
+        ->only('index', 'create', 'store', 'show', 'edit', 'update')
+        ->names('manage.role');
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');

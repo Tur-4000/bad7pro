@@ -83,8 +83,8 @@ class RoleController extends Controller
      * @param  \App\Models\Auth\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
-    {
-        dd(__METHOD__, $role);
-    }
+//    public function destroy(Role $role)
+//    {
+//        dd(__METHOD__, $role);
+//    }
 }
