@@ -25,3 +25,15 @@ mix.browserSync('127.0.0.1:8000');
 if (mix.inProduction()) {
     mix.version();
 }
+
+// mix.webpackConfig(webpack => {
+//     return {
+//         plugins: [
+//             new webpack.ProvidePlugin({
+//                 $: 'jquery',
+//                 jQuery: 'jquery',
+//                 'window.jQuery': 'jquery'
+//             })
+//         ]
+//     };
+// });

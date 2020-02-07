@@ -1,7 +1,11 @@
 require('./bootstrap');
 require('jquery-ujs');
 
-window.Vue = require('vue');
-const app = new Vue({
-    el: '#app',
-});
+// require('select2');
+
+// window.Vue = require('vue');
+// const app = new Vue({
+//     el: '#app',
+// });
+
+

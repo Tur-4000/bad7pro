@@ -46,12 +46,11 @@
 {{--        ) }}--}}
 </div>
 
-
-{{--    <script>--}}
-{{--        tail.select('#roles', {--}}
-
-{{--        });--}}
-{{--    </script>--}}
+<script>
+   $(document).ready(function() {
+       $('#roles').select2();
+    });
+</script>
 
 {{--<div class="form-row">--}}
 {{--    <div class="form-group col-md-6">--}}

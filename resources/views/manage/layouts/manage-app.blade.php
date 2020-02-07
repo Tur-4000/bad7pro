@@ -10,7 +10,7 @@
     <meta name="csrf-param" content="_token" />
 
     <link rel="stylesheet" href="{{ mix('/css/manage.css') }}">
-    <script defer src="{{ mix('/js/manage.js') }}"></script>
+    <script src="{{ mix('/js/manage.js') }}"></script>
     <title>Управление контентом</title>
 
 </head>
@@ -28,7 +28,6 @@
 
 <div class="container-fluid">
 
-
     @include('manage.includes.nav')
 
     <div class="row px-sm-0 px-xs-0 mx-xs-0">
@@ -44,9 +43,5 @@
 {{--<script src="js/jquery-3.js"></script>--}}
 {{--<script src="js/bootstrap.js"></script>--}}
 
-
-<script>
-    $('#flash-overlay-modal').modal();
-</script>
 </body>
 </html>
