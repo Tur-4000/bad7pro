@@ -15,7 +15,11 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        $permissions = Permission::select('id', 'name', 'guard_name')
+            ->orderBy('id', 'ASC')
+            ->paginate();
+
+        return view('manage.permissions.index', compact('permissions'));
     }
 
     /**
@@ -25,7 +29,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -36,7 +40,7 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd(__METHOD__, $request);
     }
 
     /**
@@ -47,7 +51,7 @@ class PermissionController extends Controller
      */
     public function show(Permission $permission)
     {
-        //
+        dd(__METHOD__, $permission);
     }
 
     /**
@@ -58,7 +62,7 @@ class PermissionController extends Controller
      */
     public function edit(Permission $permission)
     {
-        //
+        dd(__METHOD__, $permission);
     }
 
     /**
@@ -70,17 +74,6 @@ class PermissionController extends Controller
      */
     public function update(Request $request, Permission $permission)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Auth\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Permission $permission)
-    {
-        //
+        dd(__METHOD__, $request, $permission);
     }
 }

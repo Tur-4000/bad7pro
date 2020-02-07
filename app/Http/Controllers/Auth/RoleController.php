@@ -29,7 +29,11 @@ class RoleController extends Controller
      */
     public function create()
     {
-        dd(__METHOD__);
+//        dd(__METHOD__);
+
+        $role = new Role();
+
+        return view('manage.roles.create', compact('role'));
     }
 
     /**

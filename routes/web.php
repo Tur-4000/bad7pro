@@ -54,6 +54,9 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::resource('roles', 'Auth\RoleController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update')
         ->names('manage.role');
+    Route::resource('permissions', 'Auth\PermissionController')
+        ->only('index', 'create', 'store', 'show', 'edit', 'update')
+        ->names('manage.permission');
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');
