@@ -16,7 +16,6 @@
 
 @import "blocks/main";
 @import "blocks/video";
-//@import "blocks/clients";
 
 @import "blocks/services";
 @import "blocks/card";
@@ -32,4 +31,5 @@
 @import "blocks/popupOrderForm";
 
 // owl.Carousel
-//@import "~owl.carousel";
+@import "~owl.carousel";
+@import "blocks/clients";

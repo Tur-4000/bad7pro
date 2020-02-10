@@ -93,17 +93,14 @@
 }
 
 .main__partners {
-    //position: fixed;
-    //bottom: 0;
-    //right: 0;
     grid-column: span 2;
     grid-row: span 1;
-    //margin-left: 200px;
-  //width: 100%;
-  //  height: 100%;
-    //width: calc(100% - 200px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+
     background-color: grey;
-    //z-index: 2;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;

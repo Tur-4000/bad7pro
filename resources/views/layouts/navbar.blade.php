@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/" class="socials__link" aria-label="LinkedIn">
                 <svg class="socials__linkedin">
                     <use xlink:href="/img/symbol/sprite.svg#linked"></use>
                 </svg>

@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-    <script defer src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ mix('/js/app.js') }}"></script>
     <title>bad7pro - @yield('title')</title>
 </head>
 <body>
@@ -19,6 +19,17 @@
         </main>
 
     </div>
+
+    <script>
+        const hamburger = document.querySelector(`.hamburger`);
+
+        hamburger.addEventListener(`click`, (e) => {
+            e.target.closest(`.hamburger`).classList.toggle(`hamburger--active`);
+            e.target.closest(`.navbar`).querySelector('.navbar__list').classList.toggle(`navbar__list--active`);
+        });
+
+
+    </script>
 
     @yield('scripts')
 

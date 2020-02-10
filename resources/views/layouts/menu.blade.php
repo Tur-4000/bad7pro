@@ -27,28 +27,28 @@
 
     <ul class="navbar__socials socials">
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="Facebook">
+            <a href="https://www.facebook.com/" class="socials__link" aria-label="Facebook">
                 <svg class="socials__facebook">
                     <use xlink:href="/img/symbol/sprite.svg#fb"></use>
                 </svg>
             </a>
         </li>
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="Twitter">
+            <a href="https://twitter.com/" class="socials__link" aria-label="Twitter">
                 <svg class="socials__twitter">
                     <use xlink:href="/img/symbol/sprite.svg#twitter"></use>
                 </svg>
             </a>
         </li>
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="Instagram">
+            <a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram">
                 <svg class="socials__instagram">
                     <use xlink:href="/img/symbol/sprite.svg#instagram"></use>
                 </svg>
             </a>
         </li>
         <li class="socials__element">
-            <a href="#" class="socials__link" aria-label="Youtube">
+            <a href="https://www.youtube.com/" class="socials__link" aria-label="Youtube">
                 <svg class="socials__youtube">
                     <use xlink:href="/img/symbol/sprite.svg#youtube"></use>
                 </svg>

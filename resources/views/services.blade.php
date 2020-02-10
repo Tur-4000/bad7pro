@@ -91,12 +91,32 @@
 
 @endsection
 
+@section('scripts')
 
-{{--@section('scripts')--}}
-{{--    <script defer>--}}
-{{--        $('.popup-with-form').magnificPopup({--}}
-{{--            type: 'inline',--}}
-{{--            focus: '#name'--}}
-{{--        });--}}
-{{--    </script>--}}
-{{--@endsection--}}
+    <script>
+        $('.popup-with-form').magnificPopup({
+            type: 'inline',
+            focus: '#name',
+            preloader: false,
+            modal: true
+        });
+
+        $(document).ready(function() {
+            $('.popup-youtube').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+
+                fixedContentPos: false
+            });
+        });
+
+        $(document).on('click', '.popup-modal-dismiss', function(e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
+    </script>
+@endsection
+
