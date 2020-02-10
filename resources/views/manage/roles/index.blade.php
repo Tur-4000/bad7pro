@@ -44,16 +44,18 @@
                     </a>
                 </td>
                 <td>{{ $item->guard_name }}</td>
-{{--                <td>--}}
-{{--                    <a href="{{ route('manage.user.destroy', $item->id) }}"--}}
-{{--                       data-confirm="Вы действительно хотите удалить пользователя: {{ $item->name }}?"--}}
-{{--                       data-method="delete"--}}
-{{--                       rel="nofollow"--}}
-{{--                       class="text-danger">--}}
-{{--                        <i class="fas fa-user-times"></i>--}}
-{{--                        Удалить--}}
-{{--                    </a>--}}
-{{--                </td>--}}
+                @hasanyrole('Developer|Admin')
+                    <td>
+                        <a href="{{ route('manage.role.destroy', $item->id) }}"
+                           data-confirm="Вы действительно хотите удалить роль: {{ $item->name }}?"
+                           data-method="delete"
+                           rel="nofollow"
+                           class="text-danger">
+                            <i class="fas fa-user-times"></i>
+                            Удалить
+                        </a>
+                    </td>
+                @endhasanyrole
             </tr>
         @endforeach
         </tbody>

@@ -10,38 +10,19 @@
     <small id="guardHelp" class="form-text text-muted">Guard name.</small>
 </div>
 
-{{--@if($create)--}}
+<div class="form-group">
+    {{ Form::label('permissions', 'Разрешения') }}
+    <select class="form-control" name="permissions[]" id="permissions" multiple aria-describedby="permissionsHelp" >
 
-{{--    <div class="form-group">--}}
-{{--        {{ Form::label('password', 'Пароль') }}--}}
-{{--        {{ Form::password('password', $attributes = ['class' => 'form-control', 'aria-describedby' => 'passwordHelp']) }}--}}
-{{--        <small id="passwordHelp" class="form-text text-muted">Пароль.</small>--}}
-{{--    </div>--}}
+        @foreach($permissions as $permission)
+            <option value="{{ $permission->id }}" @if($role->permissions->contains($permission->id)) selected @endif>{{ $permission->name }}</option>
+        @endforeach
+    </select>
+    <small id="permissionsHelp" class="form-text text-muted">Разрешения для пользовательский роли.</small>
+</div>
 
-{{--    <div class="form-group">--}}
-{{--        {{ Form::label('password_confirmation', 'Подтверждение пароля') }}--}}
-{{--        {{ Form::password('password_confirmation', ['class' => 'form-control', 'aria-describedby' => 'passwordСonfirmationHelp']) }}--}}
-{{--        <small id="passwordСonfirmationHelp" class="form-text text-muted">Подтверждение пароля.</small>--}}
-{{--    </div>--}}
-
-{{--@endif--}}
-
-{{--<div class="form-group">--}}
-{{--    {{ Form::label('roles', 'Роль') }}--}}
-{{--    <select class="form-control" name="roles[]" id="roles" multiple aria-describedby="roleHelp" >--}}
-
-{{--        @foreach($roles as $key => $roleName)--}}
-{{--            <option value="{{ $key }}" @if($user->roles->contains($key)) selected @endif>{{ $roleName }}</option>--}}
-{{--        @endforeach--}}
-{{--    </select>--}}
-{{--    <small id="roleHelp" class="form-text text-muted">Роли пользователя. Определяют доступ к разделам админки и доступным операциям.</small>--}}
-
-    {{--    @if(in_array($key, $user->roles)) selected @endif--}}
-
-    {{--    {{ Form::select(--}}
-    {{--            'roles[]',--}}
-    {{--            $roles,--}}
-    {{--            null,--}}
-    {{--            ['class' => 'form-control', 'multiple' => 'multiple', 'aria-describedby' => 'roleHelp',]--}}
-    {{--        ) }}--}}
-{{--</div>--}}
+<script>
+    $(document).ready(function() {
+        $('#permissions').select2();
+    });
+</script>

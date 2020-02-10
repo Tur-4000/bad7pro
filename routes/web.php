@@ -52,7 +52,7 @@ Route::group( ['middleware' => ['auth']], function() {
         ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
         ->names('manage.user');
     Route::resource('roles', 'Auth\RoleController')
-        ->only('index', 'create', 'store', 'show', 'edit', 'update')
+        ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
         ->names('manage.role');
     Route::resource('permissions', 'Auth\PermissionController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update')

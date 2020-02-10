@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreRoleRequest;
+use App\Http\Requests\UpdateRoleRequest;
+use App\Models\Auth\Permission;
 use App\Models\Auth\Role;
 use Illuminate\Http\Request;
 
@@ -32,8 +35,10 @@ class RoleController extends Controller
 //        dd(__METHOD__);
 
         $role = new Role();
+        $permissions = Permission::all();
+        $create = true;
 
-        return view('manage.roles.create', compact('role'));
+        return view('manage.roles.create', compact('role', 'permissions', 'create'));
     }
 
     /**
@@ -42,9 +47,19 @@ class RoleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRoleRequest $request)
     {
-        dd(__METHOD__, $request);
+//        dd(__METHOD__, $request);
+
+        if ($role = Role::create($request->except('permissions'))) {
+            $this->syncPermissions($request, $role);
+            flash('Новая роль успешно добавлена.')->important();
+        } else {
+            flash()->error('Невозможно создать роль.');
+        }
+
+        return redirect()
+            ->route('manage.role.index');
     }
 
     /**
@@ -55,7 +70,10 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        dd(__METHOD__, $role);
+//        dd(__METHOD__, $role);
+        $permissions = Permission::pluck('name', 'id');
+
+        return view('manage.roles.show', compact('role', 'permissions'));
     }
 
     /**
@@ -66,7 +84,11 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        dd(__METHOD__, $role);
+//        dd(__METHOD__, $role);
+
+        $permissions = Permission::all();
+
+        return view('manage.roles.edit', compact('role', 'permissions'));
     }
 
     /**
@@ -76,9 +98,18 @@ class RoleController extends Controller
      * @param  \App\Models\Auth\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(UpdateRoleRequest $request, Role $role)
     {
-        dd(__METHOD__, $role, $request);
+//        dd(__METHOD__, $role, $request);
+
+        $role->fill($request->except('permissions'));
+        $this->syncPermissions($request, $role);
+        $role->save();
+
+        flash('Роль успешно обновлена.')->important();
+
+        return redirect()
+            ->route('manage.role.show', $role);
     }
 
     /**
@@ -87,8 +118,31 @@ class RoleController extends Controller
      * @param  \App\Models\Auth\Role  $role
      * @return \Illuminate\Http\Response
      */
-//    public function destroy(Role $role)
-//    {
+    public function destroy(Role $role)
+    {
 //        dd(__METHOD__, $role);
-//    }
+
+        $role->delete();
+
+        return redirect()->route('manage.role.index');
+    }
+
+
+    private function syncPermissions(Request $request, $role)
+    {
+        $oldPermissions = $role->permissions;
+
+        foreach ($oldPermissions as $oldPermission) {
+            $role->revokePermissionTo($oldPermission);
+        }
+
+        $permissions = $request->get('permissions', []);
+
+        foreach ($permissions as $permissionId) {
+            $permission = Permission::findOrFail($permissionId);
+                $role->givePermissionTo($permission);
+        }
+
+        return $role;
+    }
 }
