@@ -982,9 +982,6 @@ body {
           flex-direction: row;
   -webkit-box-align: center;
           align-items: center;
-  padding-left: 2rem;
-  background-color: grey;
-  text-align: center;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -992,7 +989,6 @@ body {
 @media (max-width: 980px) {
   .main {
     grid-template-columns: 1fr;
-    height: 89vh;
   }
 
   .main__info {
@@ -1018,12 +1014,10 @@ body {
   .main__partners {
     -webkit-box-ordinal-group: 4;
             order: 3;
-    position: relative;
-    margin-left: 0;
-    width: 100%;
     grid-column: span 1;
     grid-row: span 1;
     margin-top: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -2358,8 +2352,18 @@ img.mfp-img {
   width: 100%;
 }
 
-.clients__carousel--item {
-  margin-top: auto;
-  margin-bottom: auto;
+.partners {
+  background-color: gray;
+}
+
+.partners__wrap {
+  margin: 0 auto;
+}
+
+.partners__carousel {
+  margin: 5px 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
 }
 

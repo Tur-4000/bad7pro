@@ -16079,29 +16079,7 @@ try {
 
 __webpack_require__(/*! magnific-popup */ "./node_modules/magnific-popup/dist/jquery.magnific-popup.js");
 
-__webpack_require__(/*! owl.carousel */ "./node_modules/owl.carousel/dist/owl.carousel.js"); //
-// $(document).ready(function () {
-//     $('.clients__carousel').owlCarousel({
-//         // loop: true,
-//         autoWidth: true,
-//         margin: 50,
-//         nav: false,
-//         navText: [],
-//         dots: false,
-//         items: 5,
-//         responsive: {
-//             0: {
-//                 items: 1
-//             },
-//             600: {
-//                 items: 3
-//             },
-//             1000: {
-//                 items: 5
-//             }
-//         }
-//     });
-// });
+__webpack_require__(/*! owl.carousel */ "./node_modules/owl.carousel/dist/owl.carousel.js");
 
 /***/ }),
 

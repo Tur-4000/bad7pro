@@ -1,0 +1,16 @@
+$bgColor: gray;
+
+.partners {
+  background-color: $bgColor;
+}
+
+.partners__wrap {
+  margin: 0 auto;
+}
+
+.partners__carousel {
+  margin: 5px 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
