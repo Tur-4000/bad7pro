@@ -18,7 +18,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::select('id', 'name', 'guard_name')
+        $roles = Role::select('id', 'user_friendly_name', 'name', 'guard_name', 'description')
             ->orderBy('id', 'ASC')
             ->paginate();
 

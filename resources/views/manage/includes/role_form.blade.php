@@ -1,7 +1,13 @@
 <div class="form-group">
-    {{ Form::label('name', 'Имя') }}
+    {{ Form::label('user_friendly_name', 'Название') }}
+    {{ Form::text('user_friendly_name', null, ['class' => 'form-control', 'aria-describedby' => 'userFriendlyNameHelp']) }}
+    <small id="userFriendlyNameHelp" class="form-text text-muted">Человекопонятное название роли.</small>
+</div>
+
+<div class="form-group">
+    {{ Form::label('name', 'Техническое название') }}
     {{ Form::text('name', null, ['class' => 'form-control', 'aria-describedby' => 'nameHelp']) }}
-    <small id="nameHelp" class="form-text text-muted">Название роли.</small>
+    <small id="nameHelp" class="form-text text-muted">Техническое название роли.</small>
 </div>
 
 <div class="form-group">
@@ -19,6 +25,12 @@
         @endforeach
     </select>
     <small id="permissionsHelp" class="form-text text-muted">Разрешения для пользовательский роли.</small>
+</div>
+
+<div class="form-group">
+    {{ Form::label('description', 'Описание') }}
+    {{ Form::textarea('description', null, ['class' => 'form-control', 'rows' => 3, 'aria-describedby' => 'descriptionHelp']) }}
+    <small id="descriptionHelp" class="form-text text-muted">Подробное описание роли.</small>
 </div>
 
 <script>

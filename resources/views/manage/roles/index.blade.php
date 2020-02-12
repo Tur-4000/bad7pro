@@ -23,7 +23,9 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Название</th>
+            <th scope="col">Техническое название</th>
             <th scope="col">Guard name</th>
+            <th scope="col">Описание</th>
             <th></th>
         </tr>
         </thead>
@@ -32,11 +34,12 @@
             <tr>
                 <th scope="row">
                     <a href="{{ route('manage.role.edit', $item) }}">
-                        {{ $item->id }}
+{{--                        {{ $item->id }}--}}
                         <i class="fas fa-edit"></i>
                         {{--                        <i class="fas fa-edit"></i>--}}
                     </a>
                 </th>
+                <td>{{ $item->user_friendly_name }}</td>
                 <td>
                     <a href="{{ route('manage.role.show', $item) }}">
                         <i class="fas fa-eye"></i>
@@ -44,6 +47,7 @@
                     </a>
                 </td>
                 <td>{{ $item->guard_name }}</td>
+                <td>{{ $item->description }}</td>
                 @hasanyrole('Developer|Admin')
                     <td>
                         <a href="{{ route('manage.role.destroy', $item->id) }}"
