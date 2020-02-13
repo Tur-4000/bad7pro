@@ -21,7 +21,7 @@
                     <h4 class="card-title"><b>eMail:</b> {{ $user->email }}</h4>
                     <h4 class="card-text"><b>Роли:</b>
                         @foreach($user->roles as $role)
-                            <span class="badge badge-info">{{ $role->name }} </span>
+                            <span class="badge badge-info">{{ $role->user_friendly_name }} </span>
                         @endforeach
                     </h4>
                 </div>

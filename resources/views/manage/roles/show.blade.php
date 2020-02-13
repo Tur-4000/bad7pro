@@ -21,11 +21,15 @@
                     <h4 class="card-title"><b>Техническое название:</b> {{ $role->name }}</h4>
                     <h4 class="card-title"><b>GuardName:</b> {{ $role->guard_name }}</h4>
                     <h4 class="card-text"><b>Описание:</b> {{ $role->description }}</h4>
-                    <h4 class="card-text"><b>Назначенные разрешения:</b>
+                    <h4 class="card-text"><b>Назначенные разрешения:</b></h4>
+                    <table class="table table-sm">
                         @foreach($role->permissions as $permission)
-                            <span class="badge badge-info">{{ $permission->name }} </span>
+                            <tr>
+                                <td>{{ $permission->user_friendly_name }}</td>
+                                <td><span class="badge badge-info">{{ $permission->name }}</span></td>
+                            </tr>
                         @endforeach
-                    </h4>
+                    </table>
                 </div>
             </div>
 
