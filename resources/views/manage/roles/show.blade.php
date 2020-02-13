@@ -16,10 +16,12 @@
             @endif
 
             <div class="card">
-                <h3 class="card-header">{{ $role->name }}</h3>
+                <h3 class="card-header">{{ $role->user_friendly_name }}</h3>
                 <div class="card-body">
+                    <h4 class="card-title"><b>Техническое название:</b> {{ $role->name }}</h4>
                     <h4 class="card-title"><b>GuardName:</b> {{ $role->guard_name }}</h4>
-                    <h4 class="card-text"><b>Разрешения:</b>
+                    <h4 class="card-text"><b>Описание:</b> {{ $role->description }}</h4>
+                    <h4 class="card-text"><b>Назначенные разрешения:</b>
                         @foreach($role->permissions as $permission)
                             <span class="badge badge-info">{{ $permission->name }} </span>
                         @endforeach
@@ -37,9 +39,13 @@
             </div>
             <div class="card mt-3">
                 <div class="card-body">
-                    <a href="{{ route('manage.role.edit', $role) }}" class="btn btn-primary">
+                    <a href="{{ route('manage.role.edit', $role) }}" class="btn btn-outline-primary">
                         <i class="fas fa-user-edit"></i>
                         Редактировать
+                    </a>
+                    <a href="{{ route('manage.role.index', $role) }}" class="btn btn-outline-success mt-3">
+                        <i class="fas fa-reply"></i>
+                        К списку ролей
                     </a>
                 </div>
             </div>

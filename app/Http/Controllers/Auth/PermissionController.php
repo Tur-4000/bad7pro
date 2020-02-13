@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePermissionRequest;
+use App\Http\Requests\UpdatePermissionRequest;
 use App\Models\Auth\Permission;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::select('id', 'name', 'guard_name')
+        $permissions = Permission::select('id', 'user_friendly_name', 'name', 'guard_name', 'description')
             ->orderBy('id', 'ASC')
             ->paginate();
 
@@ -29,7 +31,11 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        dd(__METHOD__);
+//        dd(__METHOD__);
+
+        $permission = new Permission();
+
+        return view('manage.permissions.create', compact('permission'));
     }
 
     /**
@@ -38,9 +44,17 @@ class PermissionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePermissionRequest $request)
     {
-        dd(__METHOD__, $request);
+//        dd(__METHOD__, $request);
+
+        if ($permission = Permission::create($request->all())) {
+            flash('Новое разрешение успешно добавлено.')->important();
+        } else {
+            flash()->error('Невозможно создать разрешение.');
+        }
+
+        return redirect()->route('manage.permission.index');
     }
 
     /**
@@ -51,7 +65,9 @@ class PermissionController extends Controller
      */
     public function show(Permission $permission)
     {
-        dd(__METHOD__, $permission);
+//        dd(__METHOD__, $permission);
+
+        return view('manage.permissions.show', compact('permission'));
     }
 
     /**
@@ -62,7 +78,9 @@ class PermissionController extends Controller
      */
     public function edit(Permission $permission)
     {
-        dd(__METHOD__, $permission);
+//        dd(__METHOD__, $permission);
+
+        return view('manage.permissions.edit', compact('permission'));
     }
 
     /**
@@ -72,8 +90,16 @@ class PermissionController extends Controller
      * @param  \App\Models\Auth\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Permission $permission)
+    public function update(UpdatePermissionRequest $request, Permission $permission)
     {
-        dd(__METHOD__, $request, $permission);
+//        dd(__METHOD__, $request, $permission);
+
+        $permission->fill($request->all());
+        $permission->save();
+
+        flash('Разрешение успешно обновлено.')->important();
+
+        return redirect()
+            ->route('manage.permission.show', $permission);
     }
 }

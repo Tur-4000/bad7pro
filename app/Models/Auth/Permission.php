@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Permission extends \Spatie\Permission\Models\Permission
 {
+    protected $fillable = [
+        'name', 'guard_name', 'user_friendly_name', 'description',
+    ];
+
     public static function defaultPermissions()
     {
         return [
