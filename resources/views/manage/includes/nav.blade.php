@@ -40,10 +40,10 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">
-                        <i class="fas fa-id-card-alt"></i>
-                        Профиль
-                    </a>
+{{--                    <a class="dropdown-item" href="#">--}}
+{{--                        <i class="fas fa-id-card-alt"></i>--}}
+{{--                        Профиль--}}
+{{--                    </a>--}}
                     <a class="dropdown-item" href="{{ route('change-password') }}">
                         <i class="fas fa-key"></i>
                         Изменить пароль
