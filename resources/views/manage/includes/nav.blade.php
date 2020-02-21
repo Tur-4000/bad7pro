@@ -27,10 +27,12 @@
                             <i class="fas fa-tags"></i>
                             Роли
                         </a>
-                        <a class="dropdown-item" href="{{ route('manage.permission.index') }}">
-                            <i class="fas fa-lock"></i>
-                            Разрешения
-                        </a>
+                        @hasanyrole('Developer')
+                            <a class="dropdown-item" href="{{ route('manage.permission.index') }}">
+                                <i class="fas fa-lock"></i>
+                                Разрешения
+                            </a>
+                        @endhasrole
                     </div>
                 </li>
             </ul>

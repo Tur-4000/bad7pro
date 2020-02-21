@@ -21,7 +21,7 @@
     <select class="form-control" name="permissions[]" id="permissions" multiple aria-describedby="permissionsHelp" >
 
         @foreach($permissions as $permission)
-            <option value="{{ $permission->id }}" @if($role->permissions->contains($permission->id)) selected @endif>{{ $permission->name }}</option>
+            <option value="{{ $permission->id }}" @if($role->permissions->contains($permission->id)) selected @endif>{{ $permission->user_friendly_name }}</option>
         @endforeach
     </select>
     <small id="permissionsHelp" class="form-text text-muted">Разрешения для пользовательский роли.</small>

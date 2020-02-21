@@ -26,8 +26,14 @@ body {
 
 @media (max-width: 980px) {
 
+  //html, body {
+  //  height: 100%;
+  //}
+
     .container {
-        grid-template-columns: minmax(320px,  auto);
+      margin-top: 5rem;
+      grid-template-columns: minmax(320px,  auto);
+      grid-template-rows: auto auto auto auto;
     }
 
 }

@@ -6,4 +6,4 @@ try {
 } catch (e) {}
 
 require('magnific-popup');
-require('owl.carousel');
+// require('owl.carousel');

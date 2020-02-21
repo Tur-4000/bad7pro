@@ -34,23 +34,23 @@
         <div class="main__partners partners">
             <div class="partners__wrap wrap">
 {{--                <h2 class="partners__title">наши счастливые клиенты</h2>--}}
-                <div class="partners__carousel carousel owl-carousel owl-theme">
-                    <div class="carousel__item">
-                        <img src="img/client1.png" alt="Клиент 1">
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/client2.png" alt="Клиент 2">
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/client3.png" alt="Клиент 3">
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/client4.png" alt="Клиент 4">
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/client5.png" alt="Клиент 5">
-                    </div>
-                </div>
+{{--                <div class="partners__carousel carousel owl-carousel owl-theme">--}}
+{{--                    <div class="carousel__item">--}}
+{{--                        <img src="img/client1.png" alt="Клиент 1">--}}
+{{--                    </div>--}}
+{{--                    <div class="carousel__item">--}}
+{{--                        <img src="img/client2.png" alt="Клиент 2">--}}
+{{--                    </div>--}}
+{{--                    <div class="carousel__item">--}}
+{{--                        <img src="img/client3.png" alt="Клиент 3">--}}
+{{--                    </div>--}}
+{{--                    <div class="carousel__item">--}}
+{{--                        <img src="img/client4.png" alt="Клиент 4">--}}
+{{--                    </div>--}}
+{{--                    <div class="carousel__item">--}}
+{{--                        <img src="img/client5.png" alt="Клиент 5">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
 
@@ -119,27 +119,27 @@
         });
 
         // owlCarousel2
-        $(document).ready(function () {
-            $('.carousel').owlCarousel({
-                // loop: true,
-                autoWidth: true,
-                margin: 0,
-                nav: false,
-                navText: [],
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
-        });
+        // $(document).ready(function () {
+        //     $('.carousel').owlCarousel({
+        //         // loop: true,
+        //         autoWidth: true,
+        //         margin: 0,
+        //         nav: false,
+        //         navText: [],
+        //         dots: false,
+        //         responsive: {
+        //             0: {
+        //                 items: 1
+        //             },
+        //             600: {
+        //                 items: 3
+        //             },
+        //             1000: {
+        //                 items: 4
+        //             }
+        //         }
+        //     });
+        // });
     </script>
 
 @endsection
